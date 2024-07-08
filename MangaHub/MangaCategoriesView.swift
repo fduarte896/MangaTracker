@@ -1,9 +1,3 @@
-//
-//  MangaCategoriesView.swift
-//  MangaHub
-//
-//  Created by Sebastian Alzate on 11/06/24.
-//
 
 import SwiftUI
 

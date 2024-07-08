@@ -1,10 +1,3 @@
-//
-//  URLQueryItem.swift
-//  MangaHub
-//
-//  Created by Sebastian Alzate on 7/06/24.
-//
-
 import Foundation
 
 extension URLQueryItem {

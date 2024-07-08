@@ -1,10 +1,3 @@
-//
-//  MangaDetailFavouriteViewModel.swift
-//  MangaHub
-//
-//  Created by Sebastian Alzate on 25/06/24.
-//
-
 import Foundation
 
 final class MangaDetailFavouriteViewModel: ObservableObject {

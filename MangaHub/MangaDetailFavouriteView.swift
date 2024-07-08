@@ -1,9 +1,3 @@
-//
-//  MangaDetailFavouriteView.swift
-//  MangaHub
-//
-//  Created by Felipe Duarte on 22/06/24.
-//
 
 import SwiftUI
 

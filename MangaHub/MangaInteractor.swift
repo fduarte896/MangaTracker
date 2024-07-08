@@ -1,12 +1,3 @@
-//
-//  MangaInteractor.swift
-//  MangaHub
-//
-//  Created by Sebastian Alzate on 4/06/24.
-//
-
-//noHTTP y statuscode son los errores que vienen de la genérica
-
 import Foundation
 
 protocol MangaProtocol {

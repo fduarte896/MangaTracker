@@ -1,9 +1,3 @@
-//
-//  VolumesStatisticsView.swift
-//  MangaHub
-//
-//  Created by Felipe Duarte on 19/06/24.
-//
 
 import SwiftUI
 

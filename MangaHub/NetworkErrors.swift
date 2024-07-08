@@ -1,10 +1,3 @@
-//
-//  NetworkErrors.swift
-//  MangaHub
-//
-//  Created by Sebastian Alzate on 4/06/24.
-//
-
 import Foundation
 
 enum NetworkError: LocalizedError {
@@ -21,9 +14,9 @@ enum NetworkError: LocalizedError {
         case .noHTTP:
             return "No HTTP"
         case .statuscode(let code):
-            return "Error code"
+            return "Error \(code)"
         case .general(let error):
-            return "Unknown error"
+            return "Unknown \(error)"
             
         case .genresError:
             return "No Genres Found"

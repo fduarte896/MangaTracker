@@ -1,10 +1,3 @@
-//
-//  LocalInteractor.swift
-//  MangaHub
-//
-//  Created by Felipe Duarte on 28/06/24.
-//
-
 import Foundation
 
 let urlDocumentFolder = URL.documentsDirectory.appending(path: "MyMangas.json")

@@ -1,9 +1,3 @@
-//
-//  MangaPosterView.swift
-//  MangaHub
-//
-//  Created by Sebastian Alzate on 1/07/24.
-//
 
 import SwiftUI
 

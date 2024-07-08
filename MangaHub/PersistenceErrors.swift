@@ -1,10 +1,3 @@
-//
-//  PersistenceErrors.swift
-//  MangaHub
-//
-//  Created by Sebastian Alzate on 2/07/24.
-//
-
 import Foundation
 
 enum PersistenceErrors: LocalizedError {

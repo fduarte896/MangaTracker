@@ -1,11 +1,3 @@
-//
-//  MangaListViewModel.swift
-//  MangaHub
-//
-//  Created by Sebastian Alzate on 4/06/24.
-//
-
-
 import Foundation
 
 final class MangaListViewModel: ObservableObject {

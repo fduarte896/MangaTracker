@@ -1,9 +1,3 @@
-//
-//  MangaByAuthorView.swift
-//  MangaHub
-//
-//  Created by Sebastian Alzate on 18/06/24.
-//
 
 import SwiftUI
 

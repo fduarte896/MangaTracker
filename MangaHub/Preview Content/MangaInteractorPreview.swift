@@ -1,10 +1,3 @@
-//
-//  MangaInteractorPreview.swift
-//  MangaHub
-//
-//  Created by Sebastian Alzate on 14/06/24.
-//
-
 import Foundation
 
 struct MangaInteractorPreview: MangaProtocol {
