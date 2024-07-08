@@ -1,0 +1,1123 @@
+{
+    "items": [
+        {
+            "titleEnglish": "Monster",
+            "title": "Monster",
+            "startDate": "1994-12-05T00:00:00Z",
+            "sypnosis": "Kenzou Tenma, a renowned Japanese neurosurgeon working in post-war Germany, faces a difficult choice: to operate on Johan Liebert, an orphan boy on the verge of death, or on the mayor of Düsseldorf. In the end, Tenma decides to gamble his reputation by saving Johan, effectively leaving the mayor for dead.\n\nAs a consequence of his actions, hospital director Heinemann strips Tenma of his position, and Heinemann's daughter Eva breaks off their engagement. Disgraced and shunned by his colleagues, Tenma loses all hope of a successful career—that is, until the mysterious killing of Heinemann gives him another chance.\n\nNine years later, Tenma is the head of the surgical department and close to becoming the director himself. Although all seems well for him at first, he soon becomes entangled in a chain of gruesome murders that have taken place throughout Germany. The culprit is a monster—the same one that Tenma saved on that fateful day nine years ago.\n\n[Written by MAL Rewrite]",
+            "id": 1,
+            "chapters": 162,
+            "titleJapanese": "MONSTER PREVIEW",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/3/258224l.jpg\"",
+            "url": "\"https://myanimelist.net/manga/1/Monster\"",
+            "themes": [
+                {
+                    "id": "840867E7-6C60-49CE-8C47-A99AA71A2113",
+                    "theme": "Adult Cast"
+                },
+                {
+                    "id": "4394C99F-615B-494A-929E-356A342A95B8",
+                    "theme": "Psychological"
+                }
+            ],
+            "endDate": "2001-12-20T00:00:00Z",
+            "genres": [
+                {
+                    "genre": "Award Winning",
+                    "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B"
+                },
+                {
+                    "genre": "Drama",
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD"
+                },
+                {
+                    "genre": "Mystery",
+                    "id": "97C8609D-856C-419E-A4ED-E13A5C292663"
+                }
+            ],
+            "status": "finished",
+            "authors": [
+                {
+                    "lastName": "Urasawa",
+                    "firstName": "Naoki",
+                    "id": "54BE174C-2FE9-42C8-A842-85D291A6AEDD",
+                    "role": "Story & Art"
+                }
+            ],
+            "demographics": [
+                {
+                    "demographic": "Seinen",
+                    "id": "CE425E7E-C7CD-42DB-ADE3-1AB9AD16386D"
+                }
+            ],
+            "background": "Monster won the Grand Prize at the 3rd annual Tezuka Osamu Cultural Prize in 1999, as well as the 46th Shogakukan Manga Award in the General category in 2000. The series was published in English by VIZ Media under the VIZ Signature imprint from February 21, 2006 to December 16, 2008, and again in 2-in-1 omnibuses (subtitled The Perfect Edition) from July 15, 2014 to July 19, 2016. The manga was also published in Brazilian Portuguese by Panini Comics/Planet Manga from June 2012 to April 2015, in Polish by Hanami from March 2014 to February 2017, in Spain by Planeta Cómic from June 16, 2009 to September 21, 2010, and in Argentina by LARP Editores.",
+            "score": 9.15,
+            "volumes": 18
+        },
+        {
+            "titleEnglish": "Berserk",
+            "title": "Berserk",
+            "startDate": "1989-08-25T00:00:00Z",
+            "sypnosis": "Guts, a former mercenary now known as the \"Black Swordsman,\" is out for revenge. After a tumultuous childhood, he finally finds someone he respects and believes he can trust, only to have everything fall apart when this person takes away everything important to Guts for the purpose of fulfilling his own desires. Now marked for death, Guts becomes condemned to a fate in which he is relentlessly pursued by demonic beings.\n\nSetting out on a dreadful quest riddled with misfortune, Guts, armed with a massive sword and monstrous strength, will let nothing stop him, not even death itself, until he is finally able to take the head of the one who stripped him—and his loved one—of their humanity.\n\n[Written by MAL Rewrite]\n\nIncluded one-shot:\nVolume 14: Berserk: The Prototype",
+            "id": 2,
+            "chapters": null,
+            "titleJapanese": "ベルセルク",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/1/157897l.jpg\"",
+            "url": "\"https://myanimelist.net/manga/2/Berserk\"",
+            "themes": [
+                {
+                    "theme": "Gore",
+                    "id": "82728A80-0DBE-4B64-A295-A25555A4A4A5"
+                },
+                {
+                    "theme": "Military",
+                    "id": "AD119CBB-2CCE-42FE-BD89-32D42C46462F"
+                },
+                {
+                    "theme": "Mythology",
+                    "id": "AD7A66B1-D066-4BC0-8AEE-7B97904F003A"
+                },
+                {
+                    "theme": "Psychological",
+                    "id": "4394C99F-615B-494A-929E-356A342A95B8"
+                }
+            ],
+            "endDate": null,
+            "genres": [
+                {
+                    "genre": "Action",
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD"
+                },
+                {
+                    "genre": "Adventure",
+                    "id": "BE70E289-D414-46A9-8F15-928EAFBC5A32"
+                },
+                {
+                    "genre": "Award Winning",
+                    "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B"
+                },
+                {
+                    "genre": "Drama",
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD"
+                },
+                {
+                    "genre": "Fantasy",
+                    "id": "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62"
+                },
+                {
+                    "genre": "Horror",
+                    "id": "3B6A9037-3F61-4483-AD8A-E43365C5C953"
+                },
+                {
+                    "genre": "Supernatural",
+                    "id": "AE80120B-6659-4C0E-AEB2-227EC25EC4AF"
+                }
+            ],
+            "status": "currently_publishing",
+            "authors": [
+                {
+                    "firstName": "Kentarou",
+                    "role": "Story & Art",
+                    "lastName": "Miura",
+                    "id": "6F0B6948-08C4-4761-8BE1-192E68AB0A2F"
+                },
+                {
+                    "firstName": "",
+                    "role": "Art",
+                    "lastName": "Studio Gaga",
+                    "id": "0304C4E9-2D89-463A-8FDD-EEAB5B9D57B3"
+                }
+            ],
+            "demographics": [
+                {
+                    "demographic": "Seinen",
+                    "id": "CE425E7E-C7CD-42DB-ADE3-1AB9AD16386D"
+                }
+            ],
+            "background": "Berserk won the Award for Excellence at the sixth installment of Tezuka Osamu Cultural Prize in 2002. The series has over 50 million copies in print worldwide and has been published in English by Dark Horse since November 4, 2003. It is also published in Italy, Germany, Spain, France, Brazil, South Korea, Hong Kong, Taiwan, Thailand, Poland, México and Turkey. In May 2021, the author Kentaro Miura suddenly died at the age of 54. Chapter 364 of Berserk was published posthumously on September 10, 2021. Miura would often share details about the series' story with his childhood friend and fellow mangaka Kouji Mori. Berserk resumed on June 24, 2022, with Studio Gaga handling the art and Kouji Mori's supervision.",
+            "score": 9.47,
+            "volumes": null
+        },
+        {
+            "title": "20th Century Boys",
+            "titleEnglish": "20th Century Boys",
+            "startDate": "1999-09-27T00:00:00Z",
+            "sypnosis": "As the 20th century approaches its end, people all over the world are anxious that the world is changing. And probably not for the better.\n\nKenji Endo is a normal convenience store manager who's just trying to get by. But when he learns that one of his old friends going by the name \"Donkey\" has suddenly committed suicide, and that a new cult led by a figure known as \"Friend\" is becoming more notorious, Kenji starts to feel that something isn't right. With a few key clues left behind by his deceased friend, Kenji realizes that this cult is much more than he ever thought it would be—not only is this mysterious organization directly targeting him and his childhood friends, but the whole world also faces a grave danger that only the friends have the key to stop.\n\nKenji's simple life of barely making ends meet is flipped upside down when he reunites with his childhood friends, and together they must figure out the truth of how their past is connected to the cult, as the turn of the century could mean the possible end of the world.\n\n[Written by MAL Rewrite]",
+            "id": 3,
+            "chapters": 249,
+            "titleJapanese": "20世紀少年",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/5/260006l.jpg\"",
+            "url": "\"https://myanimelist.net/manga/3/20th_Century_Boys\"",
+            "themes": [
+                {
+                    "id": "3CF0EDA7-5856-40F7-A0CF-EC676B4A842C",
+                    "theme": "Historical"
+                },
+                {
+                    "id": "4394C99F-615B-494A-929E-356A342A95B8",
+                    "theme": "Psychological"
+                }
+            ],
+            "endDate": "2006-04-24T00:00:00Z",
+            "demographics": [
+                {
+                    "id": "CE425E7E-C7CD-42DB-ADE3-1AB9AD16386D",
+                    "demographic": "Seinen"
+                }
+            ],
+            "status": "finished",
+            "authors": [
+                {
+                    "id": "54BE174C-2FE9-42C8-A842-85D291A6AEDD",
+                    "firstName": "Naoki",
+                    "lastName": "Urasawa",
+                    "role": "Story & Art"
+                }
+            ],
+            "genres": [
+                {
+                    "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B",
+                    "genre": "Award Winning"
+                },
+                {
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD",
+                    "genre": "Drama"
+                },
+                {
+                    "id": "97C8609D-856C-419E-A4ED-E13A5C292663",
+                    "genre": "Mystery"
+                },
+                {
+                    "id": "2DEDC015-82DA-4EF4-B983-F0F58C8F689E",
+                    "genre": "Sci-Fi"
+                }
+            ],
+            "background": "20th Century Boys won the Kodansha Manga Award in the general category in 2001, an Excellence Prize at the Japan Media Arts Festival in 2002, and the Shogakukan Manga Award in the general category in 2003. The series' combined storyline won the Grand Prize at the 37th Japan Cartoonist Awards on May 9, 2008. VIZ Media published the series in English under the VIZ Signature imprint from February 17, 2009 to September 18, 2012. VIZ Media licensed the series in 2005; however, at Urasawa's request, it was rescheduled for release after Monster finished its English publication due to a change in art style over time. The series has also been published in Brazilian Portuguese by Panini Comics/Planet Manga since September 2012. The series was adapted into a trilogy of live-action films which released in Japan between August 30, 2008 and August 29, 2009.",
+            "score": 8.95,
+            "volumes": 22
+        },
+        {
+            "title": "Yokohama Kaidashi Kikou",
+            "titleEnglish": "Yokohama Kaidashi Kikou",
+            "startDate": "1994-04-25T00:00:00Z",
+            "sypnosis": "In a post-apocalyptic world where an environmental disaster led to the eruption of Mt. Fuji and the inundation of Yokohama, the age of humans is in its twilight. Alpha Hatsuseno is an android and the namesake of a small cafe outside Yokohama. As her owner is away on a trip indefinitely, she has been left responsible for running the cafe. Although she rarely gets any customers, Alpha remains outgoing and cheerful.\n\nWhile Alpha awaits her owner's homecoming, she explores the vicinity with her scooter and camera. Throughout her journeys, she meets new people and other androids, making memories along the way.\n\nYokohama Kaidashi Kikou is a beautiful, laid-back story centered around Alpha's daily activities, emphasizing the passing of time in everyday life.\n\n[Written by MAL Rewrite]",
+            "id": 4,
+            "chapters": 142,
+            "titleJapanese": "ヨコハマ買い出し紀行",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/1/171813l.jpg\"",
+            "url": "\"https://myanimelist.net/manga/4/Yokohama_Kaidashi_Kikou\"",
+            "themes": [
+                {
+                    "theme": "Iyashikei",
+                    "id": "263559F4-574F-4BA8-8840-2AEB445CD6BD"
+                }
+            ],
+            "endDate": "2006-02-25T00:00:00Z",
+            "demographics": [
+                {
+                    "id": "CE425E7E-C7CD-42DB-ADE3-1AB9AD16386D",
+                    "demographic": "Seinen"
+                }
+            ],
+            "authors": [
+                {
+                    "id": "EC4982FD-4793-4A1A-B956-D2E57895BB57",
+                    "lastName": "Ashinano",
+                    "role": "Story & Art",
+                    "firstName": "Hitoshi"
+                }
+            ],
+            "status": "finished",
+            "genres": [
+                {
+                    "genre": "Award Winning",
+                    "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B"
+                },
+                {
+                    "genre": "Drama",
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD"
+                },
+                {
+                    "genre": "Sci-Fi",
+                    "id": "2DEDC015-82DA-4EF4-B983-F0F58C8F689E"
+                },
+                {
+                    "genre": "Slice of Life",
+                    "id": "536445E3-CEF5-49F7-B22B-6CD9807F0744"
+                }
+            ],
+            "volumes": 14,
+            "score": 8.68,
+            "background": "Three drama CDs were released in 2002. In all three, Alpha is voiced by Hekiru Shiina and Kokone by Akiko Nakagawa. Both of whom voiced the same characters in the two OVA series. A novel based on Yokohama Kaidashi Kikou called Yokohama Kaidashi Kikou Novel: Seeing, Walking, Being Glad, written by Teriha Katsuki, was published by Kodansha on 23 October 2008. Set long after the conclusion of the manga series, it tells the story of a boy robot named Omega and his search for the legendary Cafe Alpha. (Source: Wikipedia) In 2007, the series won the Seiun Award for Best Manga. Yokohama Kaidashi Kikou has been published in English by Seven Seas Entertainment as omnibus volumes since August 9, 2022."
+        },
+        {
+            "titleEnglish": null,
+            "title": "Hajime no Ippo",
+            "startDate": "1989-09-27T00:00:00Z",
+            "sypnosis": "Makunouchi Ippo is a 16-year-old high school student who helps his mother run the family business. His hefty workload impedes on his social life, making him an easy target for bullies. One day, while being beaten up by a group of high school students, Ippo is saved by a boxer named Mamoru Takamura, and is brought to the Kamogawa Boxing Gym. \n\nThis afterschool bullying session turns his life around for the better as Ippo discovers his latent talent for boxing and decides to practice the sport professionally. However, Mamoru doubts Ippo's determination and assigns him a task deemed impossible to complete, but the resolute Ippo trains tirelessly to fulfill his mission. Along the way, he finds out what it means to attain true strength while making new friends and fighting formidable foes.\n\n[Written by MAL Rewrite]",
+            "id": 7,
+            "chapters": null,
+            "titleJapanese": "はじめの一歩",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/2/250313l.jpg\"",
+            "url": "\"https://myanimelist.net/manga/7/Hajime_no_Ippo\"",
+            "themes": [
+                {
+                    "id": "C7019504-0497-4EAE-A9A7-F5ACF7C9B0EA",
+                    "theme": "Combat Sports"
+                }
+            ],
+            "endDate": null,
+            "genres": [
+                {
+                    "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B",
+                    "genre": "Award Winning"
+                },
+                {
+                    "id": "914A2BD5-5A1F-4D6F-9EA5-A839D5A8176B",
+                    "genre": "Sports"
+                }
+            ],
+            "status": "currently_publishing",
+            "demographics": [
+                {
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9",
+                    "demographic": "Shounen"
+                }
+            ],
+            "authors": [
+                {
+                    "id": "E6BFD854-D51D-46AB-8506-6AA58D719DFC",
+                    "lastName": "Morikawa",
+                    "role": "Story & Art",
+                    "firstName": "George"
+                }
+            ],
+            "volumes": null,
+            "background": "Hajime no Ippo has sold over 94 million copies as of October 2013 and won the 15th Kodansha Manga Award for Best Shounen Manga in 1991.",
+            "score": 8.71
+        },
+        {
+            "titleEnglish": "Full Moon wo Sagashite",
+            "title": "Full Moon wo Sagashite",
+            "startDate": "2001-12-01T00:00:00Z",
+            "sypnosis": "At the tender age of twelve, Mitsuki Kouyama has a sarcoma in her throat. Though this rare cancer can be cured by removing her vocal cords, Mitsuki refuses because of her desire to become a pop singer and keep her childhood promise to Eichi Sakurai, her first love who left for America. Unable to both heal and keep her voice, she allows her health to deteriorate as she accepts her tragic fate.\n\nOne day, while escaping the home of her music-hating grandmother to attend an audition, Mitsuki meets two shinigami Takuto Kira and Meroko Yui. Realizing that Mitsuki can see them, Takuto and Meroko reveal to her that she will die in a year. Moved by her plight, Takuto allows Mitsuki the chance to pursue her dream by giving her the ability to transform into a healthy sixteen-year-old girl. After being chosen for a contract with Seed Records, Mitsuki makes her debut under the stage name Full Moon and chooses to pursue her dream music career before her life's end.\n\n[Written by MAL Rewrite]\n\n\nIncluded one-shot:\nVolume 2: Ginyuu Meika",
+            "id": 8,
+            "chapters": 35,
+            "titleJapanese": "満月〈フルムーン〉をさがして",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/3/175970l.jpg\"",
+            "url": "\"https://myanimelist.net/manga/8/Full_Moon_wo_Sagashite\"",
+            "themes": [
+                {
+                    "theme": "Music",
+                    "id": "2BA6A0CA-AB07-480F-942D-68061E786565"
+                },
+                {
+                    "theme": "Showbiz",
+                    "id": "7F64CF82-6EE6-4F14-9DE2-FD6322B9798E"
+                }
+            ],
+            "endDate": "2004-04-30T00:00:00Z",
+            "demographics": [
+                {
+                    "id": "C217B404-7691-4090-9775-9E63375EBF5B",
+                    "demographic": "Shoujo"
+                }
+            ],
+            "status": "finished",
+            "authors": [
+                {
+                    "firstName": "Arina",
+                    "role": "Story & Art",
+                    "id": "DC4661A0-C3B1-4975-8A60-5F3D7059140C",
+                    "lastName": "Tanemura"
+                }
+            ],
+            "genres": [
+                {
+                    "id": "F974BCB6-B002-44A6-A224-90D1E50595A2",
+                    "genre": "Comedy"
+                },
+                {
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD",
+                    "genre": "Drama"
+                },
+                {
+                    "id": "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62",
+                    "genre": "Fantasy"
+                },
+                {
+                    "id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076",
+                    "genre": "Romance"
+                },
+                {
+                    "id": "AE80120B-6659-4C0E-AEB2-227EC25EC4AF",
+                    "genre": "Supernatural"
+                }
+            ],
+            "background": "Full Moon wo Sagashite was published in English by VIZ Media under the Shojo Beat imprint from July 5, 2005 to October 3, 2006; and in Spanish by Glénat from October 2006 to April 2007.",
+            "score": 8.04,
+            "volumes": 7
+        },
+        {
+            "titleEnglish": "Tsubasa: RESERVoir CHRoNiCLE",
+            "title": "Tsubasa: RESERVoir CHRoNiCLE",
+            "startDate": "2003-05-21T00:00:00Z",
+            "sypnosis": "Warmhearted Syaoran has always been friends with Sakura—the princess of the Clow Kingdom who holds an extraordinary power capable of changing the world. When a mysterious man attempts to monopolize Sakura's ability, her memories scatter throughout different worlds in the form of feathers. To save Sakura, Syaoran seeks help from the Dimensional Witch and meets two other travelers—Kurogane and Fai D. Flourite.\n\nKurogane, a capable fighter and ninja, has been banished from his homeworld and wishes to return. In contrast, Fai, a magician from Celes, wants to traverse different worlds to avoid his home and past. As the price to cross dimensions, each of the three must sacrifice their most valued possession. For Sakura's sake, Syaoran agrees to give away their relationship as payment to the Dimensional Witch. And with firm determination, Syaoran, Kurogane, and Fai begin journeying through numerous worlds to fight against their ill-fated destinies.\n\n[Written by MAL Rewrite]",
+            "id": 9,
+            "chapters": 233,
+            "titleJapanese": "ツバサ -RESERVoir CHRoNiCLE-",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/1/272410l.jpg\"",
+            "url": "\"https://myanimelist.net/manga/9/Tsubasa__RESERVoir_CHRoNiCLE\"",
+            "themes": [],
+            "endDate": "2009-10-07T00:00:00Z",
+            "genres": [
+                {
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD",
+                    "genre": "Action"
+                },
+                {
+                    "id": "BE70E289-D414-46A9-8F15-928EAFBC5A32",
+                    "genre": "Adventure"
+                },
+                {
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD",
+                    "genre": "Drama"
+                },
+                {
+                    "id": "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62",
+                    "genre": "Fantasy"
+                }
+            ],
+            "status": "finished",
+            "authors": [
+                {
+                    "lastName": "CLAMP",
+                    "firstName": "",
+                    "id": "425F1E1E-5163-48D6-8F39-C56BDE69ED99",
+                    "role": "Story & Art"
+                }
+            ],
+            "demographics": [
+                {
+                    "demographic": "Shounen",
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9"
+                }
+            ],
+            "volumes": 28,
+            "score": 8.3,
+            "background": "Tsubasa: RESERVoir CHRoNiCLE was published in English by Del Rey from April 27, 2004 to November 23, 2010. Kodansha Comics USA republished the series in 10 omnibuses from August 19, 2014 to October 18, 2016."
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "id": "CE425E7E-C7CD-42DB-ADE3-1AB9AD16386D",
+                    "demographic": "Seinen"
+                }
+            ],
+            "id": 10,
+            "url": "\"https://myanimelist.net/manga/10/xxxHOLiC\"",
+            "titleJapanese": "xxxHOLiC",
+            "themes": [],
+            "startDate": "2003-02-24T00:00:00Z",
+            "background": "xxxHOLiC was previously serialized in Young Magazine, but moved to in June 2010. The series was released in English by the now defunct Del Rey from April 27, 2004 to February 21, 2012. Kodansha Comics USA has republished the series in an omnibus edition from March 18, 2014 to September 8, 2015 the final two volumes were 2-in-1, while the previous were all 3-in-1. It was also published in Spanish by Norma Editorial from July 2004 to October 2011.",
+            "title": "xxxHOLiC",
+            "authors": [
+                {
+                    "lastName": "CLAMP",
+                    "id": "425F1E1E-5163-48D6-8F39-C56BDE69ED99",
+                    "role": "Story & Art",
+                    "firstName": ""
+                }
+            ],
+            "chapters": 213,
+            "titleEnglish": "xxxHOLiC",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/3/217533l.jpg\"",
+            "score": 8.38,
+            "endDate": "2011-02-09T00:00:00Z",
+            "genres": [
+                {
+                    "id": "F974BCB6-B002-44A6-A224-90D1E50595A2",
+                    "genre": "Comedy"
+                },
+                {
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD",
+                    "genre": "Drama"
+                },
+                {
+                    "id": "97C8609D-856C-419E-A4ED-E13A5C292663",
+                    "genre": "Mystery"
+                },
+                {
+                    "id": "AE80120B-6659-4C0E-AEB2-227EC25EC4AF",
+                    "genre": "Supernatural"
+                }
+            ],
+            "sypnosis": "Living alone after his parents passed away, Kimihiro Watanuki is a high school student who can see otherworldly creatures that are attracted to him. His days are plagued by these nuisances, and he wishes to rid himself of this inconvenience. One fateful day, as Kimihiro is being chased by a horde of spirits, his feet bring him into a mysterious store to seek shelter. Here he meets Yuuko Ichihara, the mistress of this supposed store, who claims to be able to grant wishes. Yuuko offers to grant Kimihiro's, as long as he pays an appropriate price.\n\nThus begins Kimihiro's time working in her store to earn the payment necessary for his wish. In Yuuko's employ, he must become further involved with spirits and the supernatural before he can leave that world behind. How will he fare in the inexplicable encounters that await him?\n\n[Written by MAL Rewrite]",
+            "volumes": 19
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "demographic": "Shounen",
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9"
+                }
+            ],
+            "id": 11,
+            "url": "\"https://myanimelist.net/manga/11/Naruto\"",
+            "titleJapanese": "NARUTO―ナルト―",
+            "authors": [
+                {
+                    "firstName": "Masashi",
+                    "lastName": "Kishimoto",
+                    "id": "AC7020D1-D99F-4846-8E23-9C86181959AF",
+                    "role": "Story & Art"
+                }
+            ],
+            "startDate": "1999-09-21T00:00:00Z",
+            "background": "Naruto has sold over 250 million copies worldwide as of 2020, making it the 4th highest grossing manga series of all time. It was nominated for the 19th Tezuka Osamu Cultural Prize in 2014, and in the same year Masashi Kishimoto was awarded Rookie of the Year in the media fine arts category by Japan's Agency for Cultural Affairs. Numerous databooks, artbooks, novels, and fanbooks on the series have been released. Eight summary volumes featuring unaltered color pages, larger dimensions, and exclusive interviews, covering the first part of the series were released between November 7, 2008 and April 10, 2009. The series was published in English by VIZ Media under the Shonen Jump imprint from August 16, 2003 to October 6, 2015. In the last four months of 2007, the campaign titled \"Naruto Nation\" was launched, in which three volumes were published each month so that US releases would be closer to Japan's, the same practice was done in February through April of 2009 this time titled \"Generation Ninja.\" A 3-in-1 omnibus edition was also published from May 3, 2011 to October 2, 2018. A box set containing volumes 1-27 was released on August 6, 2008, another one containing volumes 28-48 on July 7, 2015, and the final box set with volumes 49-72 on January 5, 2016. It was also published in Brazilian Portuguese by Panini Comics/Planet Manga from May 2007 to June 2015, and again as Naruto Gold edition since July 2015.",
+            "title": "Naruto",
+            "themes": [
+                {
+                    "theme": "Martial Arts",
+                    "id": "ADC7CBC8-36B9-4E52-924A-4272B7B2CB2C"
+                }
+            ],
+            "chapters": 700,
+            "titleEnglish": "Naruto",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/3/249658l.jpg\"",
+            "sypnosis": "Whenever Naruto Uzumaki proclaims that he will someday become the Hokage—a title bestowed upon the best ninja in the Village Hidden in the Leaves—no one takes him seriously. Since birth, Naruto has been shunned and ridiculed by his fellow villagers. But their contempt isn't because Naruto is loud-mouthed, mischievous, or because of his ineptitude in the ninja arts, but because there is a demon inside him. Prior to Naruto's birth, the powerful and deadly Nine-Tailed Fox attacked the village. In order to stop the rampage, the Fourth Hokage sacrificed his life to seal the demon inside the body of the newborn Naruto.\n\nAnd so when he is assigned to Team 7—along with his new teammates Sasuke Uchiha and Sakura Haruno, under the mentorship of veteran ninja Kakashi Hatake—Naruto is forced to work together with other people for the first time in his life. Through undergoing vigorous training and taking on challenging missions, Naruto must learn what it means to work in a team and carve his own route toward becoming a full-fledged ninja recognized by his village.\n\n[Written by MAL Rewrite]",
+            "endDate": "2014-11-10T00:00:00Z",
+            "score": 8.07,
+            "genres": [
+                {
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD",
+                    "genre": "Action"
+                },
+                {
+                    "id": "BE70E289-D414-46A9-8F15-928EAFBC5A32",
+                    "genre": "Adventure"
+                },
+                {
+                    "genre": "Fantasy",
+                    "id": "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62"
+                }
+            ],
+            "volumes": 72
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "demographic": "Shounen",
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9"
+                }
+            ],
+            "id": 12,
+            "url": "\"https://myanimelist.net/manga/12/Bleach\"",
+            "titleJapanese": "BLEACH",
+            "authors": [
+                {
+                    "lastName": "Kubo",
+                    "firstName": "Tite",
+                    "id": "76576CBC-75F3-456C-BD8C-CDB65D47E482",
+                    "role": "Story & Art"
+                }
+            ],
+            "themes": [],
+            "background": "Bleach has sold over 130 million copies worldwide as of 2022, making it one of the top 20 best selling manga series of all-time; North American sales have also been significant with 1.7 million copies sold in the region. In 2005, the series won the 50th Shogakukan Manga Award in the shounen demographic category. Many adaptations have also been made of the series, with a 2004 television anime series along with four feature length films, numerous video games, spin-off light novels, databooks, and even a musical. The series was published in English by VIZ Media under the Shonen Jump imprint from July 6, 2004 to October 2, 2018, and as omnibus volumes from June 7, 2011 to March 5, 2019; a hardcover collector's edition for volume one was released by VIZ Media on August 5, 2008, a box set of volumes 1-21 was released on September 16, 2008 as well as volumes 22-48 on July 7, 2015, and the final box set containing volumes 49-72 on November 6, 2018. It has also been published in Portuguese (Brazil) by Panini Comics and Planet Manga since July 2007, and in Spanish by Glénat/EDT since June 2006, publishing 51 volumes before the publisher went defunct, and later was republished by Panini Comics from February 2013 to November 2017. Bleach was adapted into a live-action movie on July 20, 2018.",
+            "title": "Bleach",
+            "startDate": "2001-08-07T00:00:00Z",
+            "chapters": 705,
+            "titleEnglish": "Bleach",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/3/180031l.jpg\"",
+            "sypnosis": "For as long as he can remember, high school student Ichigo Kurosaki has been able to see the spirits of the dead, but that has not stopped him from leading an ordinary life. One day, Ichigo returns home to find an intruder in his room who introduces herself as Rukia Kuchiki, a Soul Reaper tasked with helping souls pass over. Suddenly, the two are jolted from their conversation when a Hollow—an evil spirit known for consuming souls—attacks. As Ichigo makes a brash attempt to stop the Hollow, Rukia steps in and shields him from a counterattack. Injured and unable to keep fighting, Rukia suggests a risky plan—transfer half of her Soul Reaper powers to Ichigo. He accepts and, to Rukia's surprise, ends up absorbing her powers entirely, allowing him to easily dispatch the Hollow.\n\nNow a Soul Reaper himself, Ichigo must take up Rukia's duties of exterminating Hollows and protecting spirits, both living and dead. Along with his friends Orihime Inoue and Yasutora Sado—who later discover spiritual abilities of their own—Ichigo soon learns that the consequences of becoming a Soul Reaper and dealing with the world of spirits are far greater than he ever imagined.\n\n[Written by MAL Rewrite]",
+            "genres": [
+                {
+                    "genre": "Action",
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD"
+                },
+                {
+                    "genre": "Adventure",
+                    "id": "BE70E289-D414-46A9-8F15-928EAFBC5A32"
+                },
+                {
+                    "genre": "Award Winning",
+                    "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B"
+                },
+                {
+                    "genre": "Fantasy",
+                    "id": "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62"
+                }
+            ],
+            "score": 7.84,
+            "endDate": "2016-08-22T00:00:00Z",
+            "volumes": 74
+        },
+        {
+            "status": "currently_publishing",
+            "demographics": [
+                {
+                    "demographic": "Shounen",
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9"
+                }
+            ],
+            "id": 13,
+            "url": "\"https://myanimelist.net/manga/13/One_Piece\"",
+            "titleJapanese": "ONE PIECE",
+            "themes": [],
+            "startDate": "1997-07-22T00:00:00Z",
+            "background": "One Piece is the highest selling manga series of all time, with over 500 million copies in circulation as of 2022. Volume 67 of the series currently holds the record for highest first print run of any manga (including books) of all time in Japan, with 4.05 million in 2012. The series was a finalist for the Tezuka Osamu Cultural Prize three times in a row from 2000 to 2002. In 2012, it won the 41st Japan Cartoonists Association Award Grand Prize, alongside Kimuchi Yokoyama's Neko Darake. VIZ Media has published One Piece in English under the Shonen Jump imprint since January 2, 2003 and in 3-in-1 omnibus editions since December 1, 2009. VIZ Media released three boxed sets for the manga; the first including the first 23 volumes released on November 5, 2013, the second including volumes 24-46 released on November 4, 2014, and the third including volumes 47-70 released on October 4, 2016. The series has also been published in numerous amounts of languages worldwide including; Korean, Malay, Indonesian, Chinese, Thai, Vietnamese, German, French, Italian, Spanish, Portuguese, Swedish, Danish, Norwegian, Finnish, Polish, Turkish, and Russian.",
+            "title": "One Piece",
+            "authors": [
+                {
+                    "lastName": "Oda",
+                    "role": "Story & Art",
+                    "firstName": "Eiichiro",
+                    "id": "25617399-543F-4220-9114-3A4181AF8D80"
+                }
+            ],
+            "chapters": null,
+            "titleEnglish": "One Piece",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/2/253146l.jpg\"",
+            "sypnosis": "Gol D. Roger, a man referred to as the \"King of the Pirates,\" is set to be executed by the World Government. But just before his demise, he confirms the existence of a great treasure, One Piece, located somewhere within the vast ocean known as the Grand Line. Announcing that One Piece can be claimed by anyone worthy enough to reach it, the King of the Pirates is executed and the Great Age of Pirates begins.\n\nTwenty-two years later, a young man by the name of Monkey D. Luffy is ready to embark on his own adventure, searching for One Piece and striving to become the new King of the Pirates. Armed with just a straw hat, a small boat, and an elastic body, he sets out on a fantastic journey to gather his own crew and a worthy ship that will take them across the Grand Line to claim the greatest status on the high seas.\n\n[Written by MAL Rewrite]",
+            "score": 9.22,
+            "endDate": null,
+            "genres": [
+                {
+                    "genre": "Action",
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD"
+                },
+                {
+                    "genre": "Adventure",
+                    "id": "BE70E289-D414-46A9-8F15-928EAFBC5A32"
+                },
+                {
+                    "genre": "Fantasy",
+                    "id": "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62"
+                }
+            ],
+            "volumes": null
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "demographic": "Shounen",
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9"
+                }
+            ],
+            "id": 14,
+            "titleJapanese": "RAVE",
+            "url": "\"https://myanimelist.net/manga/14/Rave\"",
+            "themes": [],
+            "startDate": "1999-07-07T00:00:00Z",
+            "authors": [
+                {
+                    "firstName": "Hiro",
+                    "role": "Story & Art",
+                    "id": "BBCB5BEA-2A14-48EA-86F4-B597F1F4428E",
+                    "lastName": "Mashima"
+                }
+            ],
+            "title": "Rave",
+            "background": "Rave was published in English by Tokyopop as Rave Master for 32 volumes from February 11, 2003 to February 10, 2009, until their license with Kodansha expired. Del Rey later gained the license and published the final three volumes in a single omnibus on May 24, 2011. Kodansha Comics USA digitally published the entire series in single volumes on October 3, 2017. It was also published in Spanish by Norma Editorial from February 2004 to February 2010.",
+            "chapters": 298,
+            "titleEnglish": "Rave Master",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/3/255624l.jpg\"",
+            "score": 7.85,
+            "endDate": "2005-07-27T00:00:00Z",
+            "genres": [
+                {
+                    "id": "BE70E289-D414-46A9-8F15-928EAFBC5A32",
+                    "genre": "Adventure"
+                },
+                {
+                    "id": "F974BCB6-B002-44A6-A224-90D1E50595A2",
+                    "genre": "Comedy"
+                },
+                {
+                    "id": "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62",
+                    "genre": "Fantasy"
+                }
+            ],
+            "sypnosis": "Fifty years ago, the wielders of the sacred Rave stones fought against an onslaught caused by demon stones called Dark Bring. This war resulted in an explosion known as \"Overdrive\"—a blast so powerful that it sent the Dark Bring into a deep slumber and scattered the pieces of Rave across the world.\n\nIn the present, Haru Glory lives a peaceful life on Garage Island until one day, he catches the creature Plue while fishing. Plue is later recognized by Shiba Roses, an old man who happens to be the original Rave Master. Shiba explains that the Dark Bring has resurfaced, and that to stop it, assembling the scattered parts of Rave is of utmost urgency. However, before Shiba can leave on this mission, he is attacked by a soldier from the evil organization Demon Card, forcing him to transfer the power of Rave to Haru. With the fate of humankind resting on his shoulders, the new Rave Master begins his quest to find the scattered Rave fragments.\n\n[Written by MAL Rewrite]",
+            "volumes": 35
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "demographic": "Shounen",
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9"
+                }
+            ],
+            "id": 15,
+            "url": "\"https://myanimelist.net/manga/15/Mahou_Sensei_Negima\"",
+            "titleJapanese": "魔法先生ネギま!",
+            "authors": [
+                {
+                    "lastName": "Akamatsu",
+                    "firstName": "Ken",
+                    "id": "7E307152-2634-46AE-9F73-8EEF01733A77",
+                    "role": "Story & Art"
+                }
+            ],
+            "startDate": "2003-02-26T00:00:00Z",
+            "background": "Mahou Sensei Negima! was published in English as Negima! by Del Rey from April 27, 2004 up until volume 27, released on July 27, 2010. Kodansha Comics USA picked up the license and published volumes 28-38 from October 2, 2012 to April 23, 2013, as well as republishing the previous volumes in nine omnibus volumes from June 14, 2011 to February 11, 2014.",
+            "title": "Mahou Sensei Negima!",
+            "themes": [
+                {
+                    "id": "C91B67F0-2B27-43F8-B399-13A974E14825",
+                    "theme": "Harem"
+                },
+                {
+                    "id": "ADC7CBC8-36B9-4E52-924A-4272B7B2CB2C",
+                    "theme": "Martial Arts"
+                },
+                {
+                    "id": "2ABA639D-480C-44FC-AE2C-FAA71C42DE7D",
+                    "theme": "School"
+                }
+            ],
+            "chapters": 355,
+            "titleEnglish": "Negima! Magister Negi Magi",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/1/259286l.jpg\"",
+            "sypnosis": "Negi Springfield, a 10-year-old wizard who recently graduated from Merdiana Magic Academy in Wales, hopes to achieve two things—to find his missing father, who was once known as the Thousand Master, and to become a Magister Magi, someone who helps the everyday world through magic. To reach his latter goal, he is assigned one last task: to teach English at a middle school in Japan.\n\nMuch to his surprise and dismay, he not only discovers that his homeroom class consists of 31 girls, but also ends up revealing his true identity as a magician to Asuna Kagurazaka, one of his new students. Negi must now negotiate with the girl and face his most difficult challenge yet—to keep his identity a secret as he tackles magical threats both from within and outside of Mahora Academy, all the while keeping a watchful eye out for his lost father.\n\n[Written by MAL Rewrite]",
+            "score": 7.93,
+            "genres": [
+                {
+                    "genre": "Action",
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD"
+                },
+                {
+                    "genre": "Adventure",
+                    "id": "BE70E289-D414-46A9-8F15-928EAFBC5A32"
+                },
+                {
+                    "genre": "Comedy",
+                    "id": "F974BCB6-B002-44A6-A224-90D1E50595A2"
+                },
+                {
+                    "genre": "Ecchi",
+                    "id": "9A13ADF1-52E5-4112-AE95-6F0DDEF4BC0D"
+                },
+                {
+                    "genre": "Fantasy",
+                    "id": "B3E8D4B2-7EE4-49CD-8DB0-9897619B3F62"
+                },
+                {
+                    "genre": "Romance",
+                    "id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076"
+                },
+                {
+                    "genre": "Supernatural",
+                    "id": "AE80120B-6659-4C0E-AEB2-227EC25EC4AF"
+                }
+            ],
+            "endDate": "2012-03-14T00:00:00Z",
+            "volumes": 38
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "demographic": "Shounen",
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9"
+                }
+            ],
+            "id": 16,
+            "url": "\"https://myanimelist.net/manga/16/Love_Hina\"",
+            "titleJapanese": "ラブひな",
+            "themes": [
+                {
+                    "theme": "Harem",
+                    "id": "C91B67F0-2B27-43F8-B399-13A974E14825"
+                }
+            ],
+            "startDate": "1998-10-21T00:00:00Z",
+            "authors": [
+                {
+                    "lastName": "Akamatsu",
+                    "firstName": "Ken",
+                    "id": "7E307152-2634-46AE-9F73-8EEF01733A77",
+                    "role": "Story & Art"
+                }
+            ],
+            "title": "Love Hina",
+            "background": "Love Hina won the 2001 Kodansha Manga Award for best shounen title. It was also chosen as Best Manga, USA Release at the 2002 and 2004 Anime Expo conventions, while the pop culture website ICv2 voted the title as the 2002 Anime Product of the Year. In 2003, it was among the top ten graphic novels on Nielsen BookScan's list, and one of the first graphic novels to ever appear in the general trade paperback list. The third volume of Love Hina's omnibus edition made the 2012 NY Times Manga bestseller list.",
+            "chapters": 120,
+            "titleEnglish": "Love Hina",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/1/259287l.jpg\"",
+            "score": 7.8,
+            "endDate": "2001-10-31T00:00:00Z",
+            "genres": [
+                {
+                    "genre": "Award Winning",
+                    "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B"
+                },
+                {
+                    "genre": "Comedy",
+                    "id": "F974BCB6-B002-44A6-A224-90D1E50595A2"
+                },
+                {
+                    "genre": "Ecchi",
+                    "id": "9A13ADF1-52E5-4112-AE95-6F0DDEF4BC0D"
+                },
+                {
+                    "genre": "Romance",
+                    "id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076"
+                }
+            ],
+            "sypnosis": "It is said that if a couple gets into the University of Tokyo together, they will live happily ever after. However, for Keitarou Urashima, UTokyo is a distant dream. After failing the entrance exams twice already, he decides to stay at his grandmother's inn in Tokyo in order to prepare for his third attempt. He is, therefore, surprised when he finds out that not only has his grandmother gone on a long vacation, but the inn has also become the Hinata House, an all-girls dormitory!\n\nUnfortunately for Keitarou, a series of misunderstandings during his first visit leave him with five untrusting tenants. But when Haruka Urashima, his aunt who works at the dorm, brings up that he is supposedly a UTokyo student, the girls' impressions of him quickly change, and they reluctantly allow him to stay. Feeling guilty about the lie, he slowly gets to know his new neighbors: the cute yet violent Naru Narusegawa, the cheeky and opportunistic Mitsune Konno, the soft-spoken Shinobu Maehara, the straight-laced Motoko Aoyama, and the mischievous Kaolla Su.\n\nThus continues the unpopular Keitarou's difficult journey to get into UTokyo, all for the chance to fulfill his childhood promise to the only girl who has ever shown any interest in him and maybe, just maybe, meet her again...\n\n[Written by MAL Rewrite]",
+            "volumes": 14
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "id": "C217B404-7691-4090-9775-9E63375EBF5B",
+                    "demographic": "Shoujo"
+                }
+            ],
+            "id": 17,
+            "url": "\"https://myanimelist.net/manga/17/Kareshi_Kanojo_no_Jijou\"",
+            "titleJapanese": "彼氏彼女の事情",
+            "themes": [
+                {
+                    "id": "2ABA639D-480C-44FC-AE2C-FAA71C42DE7D",
+                    "theme": "School"
+                }
+            ],
+            "startDate": "1995-12-22T00:00:00Z",
+            "background": "Kareshi Kanojo no Jijou was published in English as Kare Kano: His and Her Circumstances by TokyoPop from January 21, 2003 to January 9, 2007.",
+            "title": "Kareshi Kanojo no Jijou",
+            "authors": [
+                {
+                    "firstName": "Masami",
+                    "role": "Story & Art",
+                    "id": "E64A61D4-C20E-4D43-9EFE-F0552F864D60",
+                    "lastName": "Tsuda"
+                }
+            ],
+            "chapters": 108,
+            "titleEnglish": "Kare Kano: His and Her Circumstances",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/1/267780l.jpg\"",
+            "sypnosis": "Yukino Miyazawa is the perfect model student. Pretty, kind, good at sports, always at the top of her class. But she's not all that she seems. It's all an act of deception; she is really the self-confessed 'queen of vanity,' and her only goal in life is winning the praise and admiration of everyone around her.\n\nWhen she enters high school, she finally meets her match: Souichirou Arima, a handsome, athletic, popular, and very intelligent young boy. Ever since he stole the top seat in the class from her, Yukino has hated him, and has been plotting on how to take back her former place as the object of all other students' admiration.\n\nWhat she wasn't expecting, however, was that Souichirou, the very boy she hated, would confess his love for her. Or that he would find out about her deception—and use it to blackmail her!\n\nTogether, they discover that they have more in common than they knew, and they slowly begin to bring out each other's inner selves.\n\n(Source: MU)\n\nIncluded one-shots:\nVolume 1: Tora to Chameleon: Yakusoku wa Isshukan (The Tiger and the Chameleon: A Promise for One Week)\nVolume 4: Ashita Mata Mori de Aou ne (Meet Me Again Tomorrow in the Forest)\nVolume 8: Abareru Ousama (The Raging King)",
+            "genres": [
+                {
+                    "id": "F974BCB6-B002-44A6-A224-90D1E50595A2",
+                    "genre": "Comedy"
+                },
+                {
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD",
+                    "genre": "Drama"
+                },
+                {
+                    "id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076",
+                    "genre": "Romance"
+                }
+            ],
+            "endDate": "2005-05-10T00:00:00Z",
+            "score": 8.16,
+            "volumes": 21
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "id": "C217B404-7691-4090-9775-9E63375EBF5B",
+                    "demographic": "Shoujo"
+                }
+            ],
+            "id": 18,
+            "titleJapanese": "こどものおもちゃ",
+            "url": "\"https://myanimelist.net/manga/18/Kodomo_no_Omocha\"",
+            "themes": [
+                {
+                    "id": "2F76BD28-F021-4B12-9FC2-7F10BF7A5F17",
+                    "theme": "Love Polygon"
+                },
+                {
+                    "id": "2ABA639D-480C-44FC-AE2C-FAA71C42DE7D",
+                    "theme": "School"
+                },
+                {
+                    "id": "7F64CF82-6EE6-4F14-9DE2-FD6322B9798E",
+                    "theme": "Showbiz"
+                }
+            ],
+            "startDate": "1994-07-02T00:00:00Z",
+            "background": "Kodomo no Omocha was published in English as Kodocha: Sana's Stage by Tokyopop from June 11, 2002 to November 11, 2003.",
+            "title": "Kodomo no Omocha",
+            "authors": [
+                {
+                    "lastName": "Obana",
+                    "id": "92E39A13-77A5-4DAF-88D1-6878BCAC68A4",
+                    "role": "Story & Art",
+                    "firstName": "Miho"
+                }
+            ],
+            "chapters": 54,
+            "titleEnglish": "Kodocha: Sana's Stage",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/1/267715l.jpg\"",
+            "score": 8.3,
+            "genres": [
+                {
+                    "genre": "Award Winning",
+                    "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B"
+                },
+                {
+                    "genre": "Comedy",
+                    "id": "F974BCB6-B002-44A6-A224-90D1E50595A2"
+                },
+                {
+                    "genre": "Drama",
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD"
+                },
+                {
+                    "genre": "Romance",
+                    "id": "D8E1E0A9-DDC2-4520-BED7-745DD8DAD076"
+                },
+                {
+                    "genre": "Slice of Life",
+                    "id": "536445E3-CEF5-49F7-B22B-6CD9807F0744"
+                }
+            ],
+            "sypnosis": "Sana Kurata, a child actress, faces many problems in her classroom, including a major one - her bullying classmate, Akito Hayama. Sana's outgoing and friendly nature leads her to work towards correcting all of the problems around her. Her 'meddling' irritates Hayama but at the same time captivates him, just as Hayama's gloomy nature irritates Sana and compels her to change him. As these two opposites attract each other, they face many hardships which bring them closer to a mutual understanding.\n\n(Source: ANN)",
+            "endDate": "1998-10-03T00:00:00Z",
+            "volumes": 10
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9",
+                    "demographic": "Shounen"
+                }
+            ],
+            "id": 19,
+            "url": "\"https://myanimelist.net/manga/19/GetBackers\"",
+            "titleJapanese": "GetBackers -奪還屋-",
+            "authors": [
+                {
+                    "id": "5E6F492E-C829-415E-B93E-15B3BF8F769B",
+                    "lastName": "Kibayashi",
+                    "role": "Story",
+                    "firstName": "Shin"
+                },
+                {
+                    "id": "42FF45D7-0C00-472D-AC29-78E26D172210",
+                    "lastName": "Ayamine",
+                    "role": "Art",
+                    "firstName": "Rando"
+                }
+            ],
+            "themes": [],
+            "background": "GetBackers was published in English by Tokyopop for 28 volumes from February 10, 2004 to March 10, 2009 until their license with Kodansha expired.",
+            "title": "GetBackers",
+            "startDate": "1999-03-24T00:00:00Z",
+            "chapters": 344,
+            "titleEnglish": "GetBackers",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/1/169369l.jpg\"",
+            "sypnosis": "Blonde, hip, pragmatic and cool, Ginji Amano has the power to generate currents with his body like an electric eel. Brunette, equally hip, bespectacled and rambunctious, Ban Mido has the mystically mysterious 'Evil Eye,' the power to create illusions in the minds of his foes. Together, they are the GetBackers, the best retrieval team in the world. They can get back anything taken from clients, and their success rate is (almost) 100%! However, first they have to get some clients—and soon—or this spry detective duo will starve on the streets!\n\n(Source: TokyoPop)",
+            "genres": [
+                {
+                    "genre": "Action",
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD"
+                },
+                {
+                    "genre": "Comedy",
+                    "id": "F974BCB6-B002-44A6-A224-90D1E50595A2"
+                },
+                {
+                    "genre": "Drama",
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD"
+                },
+                {
+                    "genre": "Ecchi",
+                    "id": "9A13ADF1-52E5-4112-AE95-6F0DDEF4BC0D"
+                },
+                {
+                    "genre": "Mystery",
+                    "id": "97C8609D-856C-419E-A4ED-E13A5C292663"
+                },
+                {
+                    "genre": "Supernatural",
+                    "id": "AE80120B-6659-4C0E-AEB2-227EC25EC4AF"
+                }
+            ],
+            "endDate": "2007-02-21T00:00:00Z",
+            "score": 7.61,
+            "volumes": 39
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9",
+                    "demographic": "Shounen"
+                }
+            ],
+            "id": 20,
+            "url": "\"https://myanimelist.net/manga/20/Hikaru_no_Go\"",
+            "titleJapanese": "ヒカルの碁",
+            "authors": [
+                {
+                    "id": "B5B86087-54A2-49A4-B5EA-518AE451B72B",
+                    "lastName": "Obata",
+                    "role": "Art",
+                    "firstName": "Takeshi"
+                },
+                {
+                    "id": "6A216750-81E2-4144-8A8B-0AE4F1456086",
+                    "lastName": "Hotta",
+                    "role": "Story",
+                    "firstName": "Yumi"
+                }
+            ],
+            "startDate": "1998-12-08T00:00:00Z",
+            "background": "Hikaru no Go won the 45th Shogakukan Manga Award for the shounen category in 2000. The series was published in English by VIZ Media under the Shonen Jump imprint from May 19, 2004 to May 3, 2011 and also digitally from March 19, 2012 to January 8, 2013.",
+            "themes": [
+                {
+                    "theme": "Strategy Game",
+                    "id": "4EC22C40-ECA3-43FA-A400-E49FF8D88F35"
+                }
+            ],
+            "title": "Hikaru no Go",
+            "chapters": 198,
+            "titleEnglish": "Hikaru no Go",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/2/170574l.jpg\"",
+            "sypnosis": "When Hikaru Shindou discovers an old go board in his grandfather's attic, he is greeted by the spirit of an ancient go master, Fujiwara no Sai. Sai spent his life teaching the techniques of the board game to an emperor during the Heian era, and now in his ghostly state, he is eager to share his passion with the unsuspecting Hikaru. The only problem is that Hikaru is not all that interested in board games. But Sai is not easily dissuaded. Pressured by Sai's unrelenting desire to pursue something he refers to as the \"Divine Move,\" Hikaru begrudgingly consents to playing the game, executing moves as dictated by Sai. But slowly, intrigued by the dedication of his peers, he begins to learn the basics of the game.\n\nAs Hikaru enters into the world of go, guided by his intangible tutor and inspired by his rival, Akira Touya, he cannot help but be drawn into the complex game as he grows determined to prove his own abilities. In a coming-of-age story centering around an ancient board game, Hikaru no Go tells the story of a boy maturing through the pursuit of his newfound passion.\n\n[Written by MAL Rewrite]",
+            "endDate": "2003-07-14T00:00:00Z",
+            "genres": [
+                {
+                    "genre": "Award Winning",
+                    "id": "4C13067F-96FF-4F14-A1C0-B33215F24E0B"
+                },
+                {
+                    "genre": "Comedy",
+                    "id": "F974BCB6-B002-44A6-A224-90D1E50595A2"
+                },
+                {
+                    "genre": "Drama",
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD"
+                },
+                {
+                    "genre": "Supernatural",
+                    "id": "AE80120B-6659-4C0E-AEB2-227EC25EC4AF"
+                }
+            ],
+            "score": 8.12,
+            "volumes": 23
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "demographic": "Shounen",
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9"
+                }
+            ],
+            "id": 21,
+            "url": "\"https://myanimelist.net/manga/21/Death_Note\"",
+            "titleJapanese": "DEATH NOTE",
+            "themes": [
+                {
+                    "theme": "Psychological",
+                    "id": "4394C99F-615B-494A-929E-356A342A95B8"
+                }
+            ],
+            "startDate": "2003-12-01T00:00:00Z",
+            "background": "Death Note has inspired three live-action films, a TV drama series as well as a stage musical. The series has also inspired numerous copycat crimes outside of Japan. The manga was published in English by VIZ Media under the Shonen Jump Advanced imprint from October 10, 2005 and July 3, 2007 and again in 2-in-1 omnibuses (subtitled Black edition) from December 28, 2010 to November 1, 2011. There have been several more rereleases of the series: a special hardcover edition of the first volume on September 16, 2008, a complete box set on October 7, 2008, which included a guidebook titled Death Note 13: How to Read, and a complete omnibus on September 5, 2017. It was also published in Italy by Planet Manga from November 2006 to September 2008; in Brazil by JBC from June 2007 to August 2008, and again in 2-in-1 edition (Black Edition) from June 2013 to December 2013; in Argentina by LARP Editores from May 20, 2009 to April 2012; and in Spanish by Glénat España from June 30, 2006 to Septmber 30, 2007. Norma Editorial republished the series in Spanish as the Black edition from April 11 to September 27, 2013.",
+            "title": "Death Note",
+            "authors": [
+                {
+                    "role": "Art",
+                    "lastName": "Obata",
+                    "firstName": "Takeshi",
+                    "id": "B5B86087-54A2-49A4-B5EA-518AE451B72B"
+                },
+                {
+                    "role": "Story",
+                    "lastName": "Ohba",
+                    "firstName": "Tsugumi",
+                    "id": "756DECE4-67C5-42E6-BAC7-9298BEDEB15E"
+                }
+            ],
+            "chapters": 108,
+            "titleEnglish": "Death Note",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/1/258245l.jpg\"",
+            "score": 8.7,
+            "sypnosis": "Ryuk, a god of death, drops his Death Note into the human world for personal pleasure. In Japan, prodigious high school student Light Yagami stumbles upon it. Inside the notebook, he finds a chilling message: those whose names are written in it shall die. Its nonsensical nature amuses Light; but when he tests its power by writing the name of a criminal in it, they suddenly meet their demise. \n\nRealizing the Death Note's vast potential, Light commences a series of nefarious murders under the pseudonym \"Kira,\" vowing to cleanse the world of corrupt individuals and create a perfect society where crime ceases to exist. However, the police quickly catch on, and they enlist the help of L—a mastermind detective—to uncover the culprit.\n\nDeath Note tells the thrilling tale of Light and L as they clash in a great battle-of-minds, one that will determine the future of the world.\n\n[Written by MAL Rewrite]",
+            "endDate": "2006-05-15T00:00:00Z",
+            "genres": [
+                {
+                    "genre": "Supernatural",
+                    "id": "AE80120B-6659-4C0E-AEB2-227EC25EC4AF"
+                },
+                {
+                    "genre": "Suspense",
+                    "id": "0131CBD5-8531-4753-8923-CA55AE2DB52E"
+                }
+            ],
+            "volumes": 12
+        },
+        {
+            "status": "finished",
+            "demographics": [
+                {
+                    "id": "5E05BBF1-A72E-4231-9487-71CFE508F9F9",
+                    "demographic": "Shounen"
+                }
+            ],
+            "id": 22,
+            "url": "\"https://myanimelist.net/manga/22/Rurouni_Kenshin__Meiji_Kenkaku_Romantan\"",
+            "titleJapanese": "るろうに剣心 -明治剣客浪漫譚-",
+            "themes": [
+                {
+                    "theme": "Historical",
+                    "id": "3CF0EDA7-5856-40F7-A0CF-EC676B4A842C"
+                },
+                {
+                    "theme": "Samurai",
+                    "id": "04238A83-08E4-4066-AE4C-D5024609F8F0"
+                }
+            ],
+            "startDate": "1994-04-12T00:00:00Z",
+            "background": "Rurouni Kenshin: Meiji Kenkaku Romantan was published in English as Rurouni Kenshin by VIZ Media under the Shonen Jump imprint from December 23, 2003 to July 5, 2006 and again in 3-in-1 omnibus edition under Shonen Jump VIZBIG imprint from January 29, 2008 to March 16, 2010. The publisher has been releasing the series in 3-in-1 omnibuses since January 3, 2017.",
+            "authors": [
+                {
+                    "firstName": "Nobuhiro",
+                    "role": "Story & Art",
+                    "lastName": "Watsuki",
+                    "id": "A9FBCFAA-B219-42C9-819A-5F7CB4835086"
+                }
+            ],
+            "title": "Rurouni Kenshin: Meiji Kenkaku Romantan",
+            "chapters": 259,
+            "titleEnglish": "Rurouni Kenshin: Meiji Swordsman Romantic Story",
+            "mainPicture": "\"https://cdn.myanimelist.net/images/manga/2/127583l.jpg\"",
+            "sypnosis": "Ten years have passed since the end of Bakumatsu, an era of war that saw the uprising of citizens against the Tokugawa shogunate. The revolutionaries wanted to create a time of peace, and a thriving country free from oppression. The new age of Meiji has come, but peace has not yet been achieved. Swords are banned but people are still murdered in the streets. Orphans of war veterans are left with nowhere to go, while the government seems content to just line their pockets with money.\n\nOne wandering samurai, Kenshin Himura, still works to make sure the values he fought for are worth the lives spent to bring about the new era. Once known as Hitokiri Battousai, he was feared as the most ruthless killer of all the revolutionaries. Now haunted by guilt, Kenshin has sworn never to kill again in atonement for the lives he took, and he may never know peace until killing is a thing of the past.\n\nNow in the 11th year of Meiji, Kenshin stumbles upon Kaoru Kamiya, owner and head instructor of a small dojo being threatened to close its doors. The police force is powerless to stop the string of murders done in the name of her dojo by a man claiming to be the famous Battousai. Kenshin's wanderings pause for now as he joins Kaoru to clear both their names. But how long can he stay before his past catches up to him?\n\n[Written by MAL Rewrite]\n\nIncluded one-shot:\nVolume 28: Meteor Strike",
+            "endDate": "1999-09-21T00:00:00Z",
+            "score": 8.56,
+            "genres": [
+                {
+                    "genre": "Action",
+                    "id": "72C8E862-334F-4F00-B8EC-E1E4125BB7CD"
+                },
+                {
+                    "genre": "Drama",
+                    "id": "4312867C-1359-494A-AC46-BADFD2E1D4CD"
+                }
+            ],
+            "volumes": 28
+        }
+    ],
+    "metadata": {
+        "total": 64833,
+        "per": 20,
+        "page": 1
+    }
+}
