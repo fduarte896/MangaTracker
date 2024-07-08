@@ -1,6 +1,6 @@
 import Foundation
 
-final class MangaDataViewModel: ObservableObject {
+final class MangaDetailViewModel: ObservableObject {
     
     var manga: MangaModel
     
