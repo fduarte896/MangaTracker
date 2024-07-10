@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct FavouritesPageView: View {
+struct MyCollectionPagerView: View {
     
     @Binding var isFirstLaunch: Bool
     
@@ -20,6 +20,6 @@ struct FavouritesPageView: View {
 
 #Preview {
     NavigationStack {
-        FavouritesPageView(isFirstLaunch: .constant(true))
+        MyCollectionPagerView(isFirstLaunch: .constant(true))
     }
 }

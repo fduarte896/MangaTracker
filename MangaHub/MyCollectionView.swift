@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct MangaListFavouriteView: View {
+struct MyCollectionView: View {
     
     @StateObject var viewmodel = MangaListFavouriteViewModel()
     
@@ -44,7 +44,7 @@ struct MangaListFavouriteView: View {
 
 
 #Preview {
-    MangaListFavouriteView()
+    MyCollectionView()
 }
 
 

@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct MangaCategoriesView: View {
+struct MangasByCategoryView: View {
     
     @StateObject var viewmodel = MangaCategoriesViewModel()
     @Binding var pathCategories: NavigationPath
@@ -53,6 +53,6 @@ struct MangaCategoriesView: View {
 
 #Preview {
     NavigationStack {
-        MangaCategoriesView(pathCategories: .constant(NavigationPath()),category: "Action", type: "Genre")
+        MangasByCategoryView(pathCategories: .constant(NavigationPath()),category: "Action", type: "Genre")
     }
 }

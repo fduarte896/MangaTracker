@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct HomePageView: View {
+struct HomePagerView: View {
     
     @Binding var isFirstLaunch: Bool
     
@@ -32,6 +32,6 @@ struct HomePageView: View {
 
 #Preview {
     NavigationStack {
-        HomePageView(isFirstLaunch: .constant(true))
+        HomePagerView(isFirstLaunch: .constant(true))
     }
 }

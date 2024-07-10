@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct VolumesStatisticsView: View {
+struct ModalView: View {
 
     @ObservedObject var viewmodel: MangaDetailFavouriteViewModel
     
@@ -45,6 +45,6 @@ struct VolumesStatisticsView: View {
 }
 
 #Preview {
-    VolumesStatisticsView(viewmodel: MangaDetailFavouriteViewModel(manga: .preview))
+    ModalView(viewmodel: MangaDetailFavouriteViewModel(manga: .preview))
 }
 

@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct CategoriesPageView: View {
+struct CategoriesPagerView: View {
     
     @Binding var isFirstLaunch: Bool
     
@@ -25,6 +25,6 @@ struct CategoriesPageView: View {
 
 #Preview {
     NavigationStack {
-        CategoriesPageView(isFirstLaunch: .constant(true))
+        CategoriesPagerView(isFirstLaunch: .constant(true))
     }
 }

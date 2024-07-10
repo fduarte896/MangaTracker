@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct CategoriesView: View {
+struct AllCategoriesView: View {
     
     @StateObject var viewmodel = MangaCategoriesViewModel()
     @State private var pathCategories = NavigationPath()
@@ -19,7 +19,7 @@ struct CategoriesView: View {
                 MangaCategoriesView(pathCategories: $pathCategories, category: category, type: viewmodel.categoryType)
             }
             .navigationDestination(for: MangaModel.self) { manga in
-                MangaDetailView(vmData: MangaDataViewModel(manga: manga))
+                MangaDetailView(vmData: MangaDetailViewModel(manga: manga))
             }
             .navigationDestination(for: Author.self) { author in
                 MangaByAuthorView(path: $pathCategories, author: author)
@@ -70,6 +70,6 @@ struct CategoriesView: View {
 
 #Preview {
     NavigationStack{
-        CategoriesView()
+        AllCategoriesView()
     }
 }

@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct MangaDetailFavouriteView: View {
+struct MyMangaDetailView: View {
     
     @StateObject var viewmodel: MangaDetailFavouriteViewModel
     
@@ -131,6 +131,6 @@ struct MangaDetailFavouriteView: View {
 
 #Preview {
     NavigationStack {
-        MangaDetailFavouriteView(viewmodel: MangaDetailFavouriteViewModel(manga: .preview))
+        MyMangaDetailView(viewmodel: MangaDetailFavouriteViewModel(manga: .preview))
     }
 }
