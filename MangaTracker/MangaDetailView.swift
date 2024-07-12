@@ -3,7 +3,7 @@ import SwiftUI
 
 struct MangaDetailView: View {
     
-    @StateObject var vmData: MangaDataViewModel
+    @StateObject var vmData: MangaDetailViewModel
     
     @State var isExpanded: Bool = false
     @State private var showVolumes : Bool = false
@@ -106,7 +106,7 @@ struct MangaDetailView: View {
 
 #Preview {
     NavigationStack {
-        MangaDetailView(vmData: MangaDataViewModel(manga: .preview))
+        MangaDetailView(vmData: MangaDetailViewModel(manga: .preview))
     }
 }
 

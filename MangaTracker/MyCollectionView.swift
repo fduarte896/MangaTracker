@@ -34,7 +34,7 @@ struct MyCollectionView: View {
                 viewmodel.showFavourites()
             }
             .navigationDestination(for: MangaModel.self) { manga in
-                MangaDetailFavouriteView(viewmodel: MangaDetailFavouriteViewModel(manga: manga))
+                MyMangaDetailView(viewmodel: MangaDetailFavouriteViewModel(manga: manga))
             }
             .navigationTitle("My Favorite Mangas")
         }

@@ -8,13 +8,7 @@ struct MangaSplashScreenView: View {
             Image("MangaSplash")
                 .resizable()
                 .ignoresSafeArea()
-            
-//            Color.black
-//                .edgesIgnoringSafeArea(.all)
-//            
-//            Text("MangaTracker")
-//                .font(.title)
-//                .foregroundStyle(.white)
+
         }
     }
 }

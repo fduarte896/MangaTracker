@@ -10,12 +10,12 @@ struct MainTabItemView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            CategoriesView()
+            AllCategoriesView()
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Categories")
                 }
-            MangaListFavouriteView()
+            MyCollectionView()
                 .tabItem {
                     Image(systemName: "star")
                     Text("Favorites")

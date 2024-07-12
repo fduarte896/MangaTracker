@@ -7,17 +7,17 @@ struct PagerView: View {
     
     var body: some View {
         TabView {
-            HomePageView(isFirstLaunch: $isFirstLaunch)
+            HomePagerView(isFirstLaunch: $isFirstLaunch)
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            CategoriesPageView(isFirstLaunch: $isFirstLaunch)
+            CategoriesPagerView(isFirstLaunch: $isFirstLaunch)
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Categories")
                 }
-            FavouritesPageView(isFirstLaunch: $isFirstLaunch)
+            MyCollectionPagerView(isFirstLaunch: $isFirstLaunch)
                 .tabItem {
                     Image(systemName: "star")
                     Text("Favorites")

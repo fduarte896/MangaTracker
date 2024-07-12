@@ -73,7 +73,7 @@ struct MangaListView: View {
                 }
             }
             .navigationDestination(for: MangaModel.self) { manga in
-                MangaDetailView(vmData: MangaDataViewModel(manga: manga))
+                MangaDetailView(vmData: MangaDetailViewModel(manga: manga))
             }
             .navigationDestination(for: Author.self) { author in
                 MangaByAuthorView(path: $path, author: author)

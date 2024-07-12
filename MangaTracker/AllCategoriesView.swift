@@ -16,7 +16,7 @@ struct AllCategoriesView: View {
                 }
             }
             .navigationDestination(for: String.self) { category in
-                MangaCategoriesView(pathCategories: $pathCategories, category: category, type: viewmodel.categoryType)
+                MangasByCategoryView(pathCategories: $pathCategories, category: category, type: viewmodel.categoryType)
             }
             .navigationDestination(for: MangaModel.self) { manga in
                 MangaDetailView(vmData: MangaDetailViewModel(manga: manga))

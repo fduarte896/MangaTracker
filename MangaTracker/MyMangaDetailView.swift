@@ -110,7 +110,7 @@ struct MyMangaDetailView: View {
             
         }
         .sheet(isPresented: $showVolumes) {
-            VolumesStatisticsView(viewmodel: viewmodel)
+            ModalView(viewmodel: viewmodel)
                 .presentationDetents([.medium, .large])
         }
         .alert("Something went wrong", isPresented: $viewmodel.showAlert) {

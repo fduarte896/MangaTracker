@@ -379,7 +379,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 195A0C0E2C0F89E2008BF4A0 /* Build configuration list for PBXProject "MangaHub" */;
+			buildConfigurationList = 195A0C0E2C0F89E2008BF4A0 /* Build configuration list for PBXProject "MangaTracker" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -721,7 +721,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		195A0C0E2C0F89E2008BF4A0 /* Build configuration list for PBXProject "MangaHub" */ = {
+		195A0C0E2C0F89E2008BF4A0 /* Build configuration list for PBXProject "MangaTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				195A0C1F2C0F89E4008BF4A0 /* Debug */,
