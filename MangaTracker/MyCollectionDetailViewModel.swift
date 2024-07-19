@@ -1,6 +1,6 @@
 import Foundation
 
-final class MangaDetailFavouriteViewModel: ObservableObject {
+final class MyCollectionDetailViewModel: ObservableObject {
     
     var manga: MangaModel
     
@@ -14,6 +14,8 @@ final class MangaDetailFavouriteViewModel: ObservableObject {
     
     @Published var showAlert: Bool = false
     
+    @Published var collectionCompleted = false
+    
     private let interactor: LocalProtocol
     
     init(interactor: LocalProtocol = LocalInteractor(), manga: MangaModel) {
@@ -21,11 +23,21 @@ final class MangaDetailFavouriteViewModel: ObservableObject {
         self.manga = manga
         showReadingValue()
         showBoughtVolumes()
+        checkCompletedCollection()
+    }
+    
+    func checkCompletedCollection() {
+        if manga.boughtVolumes.count == manga.volumes {
+            manga.isCompleted = true
+            collectionCompleted = true
+        }else {
+            collectionCompleted = false
+        }
     }
     
     func loadData() throws {
         
-        savedFavouriteMangas = try interactor.cargar()
+        savedFavouriteMangas = try interactor.load()
         
     }
     
@@ -44,7 +56,7 @@ final class MangaDetailFavouriteViewModel: ObservableObject {
             if let index = savedFavouriteMangas.firstIndex(where: {$0.id == manga.id}) {
                 savedFavouriteMangas[index] = manga
             }
-            try interactor.guardar(array: savedFavouriteMangas)
+            try interactor.save(array: savedFavouriteMangas)
         } catch {
             errorMessage = "Error persisting your reading volume"
             showAlert = true
@@ -64,7 +76,7 @@ final class MangaDetailFavouriteViewModel: ObservableObject {
             if let index = savedFavouriteMangas.firstIndex(where: {$0.id == manga.id}) {
                 savedFavouriteMangas[index] = manga
             }
-            try interactor.guardar(array: savedFavouriteMangas)
+            try interactor.save(array: savedFavouriteMangas)
         } catch {
             errorMessage = "Error persisting your volumes"
             showAlert = true

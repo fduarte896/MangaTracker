@@ -1,7 +1,7 @@
 import Foundation
 
 
-final class MangaListFavouriteViewModel : ObservableObject {
+final class MyCollectionViewModel : ObservableObject {
     
     @Published var loadedFavouriteMangas : [MangaModel] = []
     
@@ -10,6 +10,7 @@ final class MangaListFavouriteViewModel : ObservableObject {
     @Published var searchFavManga = ""
     
     @Published var errorMessage: String = ""
+    
     
     @Published var showAlert: Bool = false
 
@@ -20,9 +21,9 @@ final class MangaListFavouriteViewModel : ObservableObject {
         self.interactor = interactor
     }
     
-    func showFavourites() {
+    func LoadMyCollectionFromJSON() {
         do {
-            loadedFavouriteMangas = try interactor.cargar()
+            loadedFavouriteMangas = try interactor.load()
             //        containsFavourites = !loadedFavouriteMangas.isEmpty
         } catch let error as PersistenceErrors {
 //            loadedFavouriteMangas = []
@@ -37,7 +38,7 @@ final class MangaListFavouriteViewModel : ObservableObject {
     func deleteMangas(indexSet: IndexSet) {
         loadedFavouriteMangas.remove(atOffsets: indexSet)
         do {
-            try interactor.guardar(array: loadedFavouriteMangas)
+            try interactor.save(array: loadedFavouriteMangas)
             //        containsFavourites = !loadedFavouriteMangas.isEmpty
         } catch let error as PersistenceErrors {
             errorMessage = error.errorDescription
