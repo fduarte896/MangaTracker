@@ -1,18 +1,18 @@
 //
-//  tarjetas.swift
+//  PosterView.swift
 //  MangaTracker
 //
-//  Created by Felipe Duarte on 20/07/24.
+//  Created by Felipe Duarte on 26/07/24.
 //
 
 import SwiftUI
 
-struct tarjetas: View {
+struct PosterView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    tarjetas()
+    PosterView()
 }
