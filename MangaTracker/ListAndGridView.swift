@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct MangaListView: View {
+struct ListAndGridView: View {
     
     @StateObject var viewmodel = MangaListViewModel()
     
@@ -32,9 +32,9 @@ struct MangaListView: View {
                     if viewmodel.isList {
                         List(viewmodel.mangas) { manga in
                             NavigationLink(value: manga) {
-                                MangaCellView(manga: manga)
+                                MangaCellView(manga: manga, showOwnedVolumes: false)
                                     .onAppear {
-                                        viewmodel.isLastItem(manga: manga)
+                                        viewmodel.isLastItem(manga1: manga)
                                     }
                             }
                         }
@@ -63,7 +63,7 @@ struct MangaListView: View {
                                         }
                                     }
                                     .onAppear {
-                                        viewmodel.isLastItem(manga: manga)
+                                        viewmodel.isLastItem(manga1: manga)
                                     }
                                 }
                             }
@@ -73,7 +73,7 @@ struct MangaListView: View {
                 }
             }
             .navigationDestination(for: MangaModel.self) { manga in
-                MangaDetailView(vmData: MangaDetailViewModel(manga: manga))
+                MangaDetailView(viewmodel: MangaDetailViewModel(manga: manga))
             }
             .navigationDestination(for: Author.self) { author in
                 MangaByAuthorView(path: $path, author: author)
@@ -84,7 +84,7 @@ struct MangaListView: View {
             .alert("Something went wrong", isPresented: $viewmodel.showAlert, presenting: viewmodel.myError, actions: { error in
                 Button("Try again") {
                     switch error {
-                    case .allMangasError: viewmodel.fetchAllMangas()
+                    case .carrouselMangasError: viewmodel.fetchAllMangas()
                     case .bestMangasError: viewmodel.fetchBestMangas()
                     }
                 }
@@ -95,7 +95,7 @@ struct MangaListView: View {
                 }
             }, message: { error in
                 switch error {
-                case .allMangasError: Text("Error loading mangas")
+                case .carrouselMangasError: Text("Error loading mangas")
                 case .bestMangasError: Text("Error loading best mangas")
                 }
                 
@@ -128,7 +128,7 @@ struct MangaListView: View {
 
 
 #Preview("PREVIEW DATA") {
-    MangaListView(viewmodel: MangaListViewModel(interactor: .preview))
+    ListAndGridView(viewmodel: MangaListViewModel(interactor: .preview))
 }
 
 

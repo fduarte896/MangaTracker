@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct MangaSplashScreenView: View {
+struct SplashScreen: View {
     var body: some View {
         ZStack {
             
@@ -14,5 +14,5 @@ struct MangaSplashScreenView: View {
 }
 
 #Preview {
-    MangaSplashScreenView()
+    SplashScreen()
 }

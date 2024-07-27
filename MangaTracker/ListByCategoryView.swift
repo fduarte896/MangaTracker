@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct MangasByCategoryView: View {
+struct ListByCategoryView: View {
     
     @StateObject var viewmodel = MangaCategoriesViewModel()
     @Binding var pathCategories: NavigationPath
@@ -12,15 +12,16 @@ struct MangasByCategoryView: View {
         
         List(viewmodel.mangasByCategory) { manga in
             NavigationLink(value: manga) {
-                MangaCellView(manga: manga)
+                MangaCellView(manga: manga, showOwnedVolumes: false)
                     .onAppear {
-                        viewmodel.isLastItemCategories(manga: manga, category: category)
+//                        viewmodel.isLastItemCategories(manga: manga, category: category)
+             
                     }
             }
         }
         .onAppear {
             viewmodel.categoryType = type
-            viewmodel.categorySelected(category: category)
+//            viewmodel.categorySelected(category: category)
         }
         .alert("Something went wrong", isPresented: $viewmodel.showAlert, presenting: viewmodel.myErrorSpecific, actions: { error in
             Button("Try again") {
@@ -53,6 +54,6 @@ struct MangasByCategoryView: View {
 
 #Preview {
     NavigationStack {
-        MangasByCategoryView(pathCategories: .constant(NavigationPath()),category: "Action", type: "Genre")
+        ListByCategoryView(pathCategories: .constant(NavigationPath()),category: "Action", type: "Genre")
     }
 }

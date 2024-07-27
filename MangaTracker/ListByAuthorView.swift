@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct MangaByAuthorView: View {
+struct ListByAuthorView: View {
     
     @StateObject var viewmodel = MangaListViewModel()
     @Binding var path: NavigationPath
@@ -12,7 +12,7 @@ struct MangaByAuthorView: View {
         
         List(viewmodel.mangasByAuthor) { manga in
             NavigationLink(value: manga) {
-                MangaCellView(manga: manga)
+                MangaCellView(manga: manga, showOwnedVolumes: false)
                     .onAppear {
                         viewmodel.isLastItemAuthor(manga: manga, idAuthor: author.id)
                     }
@@ -49,6 +49,6 @@ struct MangaByAuthorView: View {
 
 #Preview {
     NavigationStack {
-        MangaByAuthorView(path: .constant(NavigationPath()), author: Author(id: "AC7020D1-D99F-4846-8E23-9C86181959AF", role: "Story & Art", firstName: "Masashi", lastName: "Kishimoto"))
+        ListByAuthorView(path: .constant(NavigationPath()), author: Author(id: "AC7020D1-D99F-4846-8E23-9C86181959AF", role: "Story & Art", firstName: "Masashi", lastName: "Kishimoto"))
     }
 }
