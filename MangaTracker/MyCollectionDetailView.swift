@@ -1,9 +1,9 @@
 
 import SwiftUI
 
-struct MyMangaDetailView: View {
+struct MyCollectionDetailView: View {
     
-    @StateObject var viewmodel: MangaDetailFavouriteViewModel
+    @StateObject var viewmodel: MyCollectionDetailViewModel
     
     @State var isExpanded: Bool = false
     @State private var showVolumes : Bool = false
@@ -27,17 +27,7 @@ struct MyMangaDetailView: View {
             Text(viewmodel.manga.title)
                 .font(.title)
                 .bold()
-            Text(viewmodel.manga.sypnosis ?? "")
-                .multilineTextAlignment(.leading)
-                .lineLimit(isExpanded ? nil : 5)
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
-            Button {
-                withAnimation {
-                    isExpanded.toggle()
-                }
-            } label: {
-                Text(isExpanded ? "Show Less" : "Read More")
-            }
+
             
             Link("Go to manga website", destination: viewmodel.manga.validURL)
             
@@ -73,9 +63,36 @@ struct MyMangaDetailView: View {
                     .clipShape(Capsule())
                     .padding(.horizontal)
                     
+                        
+                        /*
+                         
+                         GAUGE!!
+                         
+                         @State private var current = 67.0
+                         @State private var minValue = 50.0
+                         @State private var maxValue = 170.0
+                         
+                         
+                         var body: some View {
+                         Gauge(value: current, in: minValue...maxValue) {
+                         Image(systemName: "heart.fill")
+                         .foregroundColor(.red)
+                         } currentValueLabel: {
+                         Text("\(Int(current))")
+                         .foregroundColor(Color.green)
+                         } minimumValueLabel: {
+                         Text("\(Int(minValue))")
+                         .foregroundColor(Color.green)
+                         } maximumValueLabel: {
+                         Text("\(Int(maxValue))")
+                         .foregroundColor(Color.red)
+                         }
+                         .gaugeStyle(.circular)
+                         */
                     
+                    Text(viewmodel.collectionCompleted ? "Congratulations, you now own all \(viewmodel.manga.volumes ?? 0) volumes and have completed the collection!" : "Bought volumes: \(viewmodel.manga.boughtVolumes.count) of \(viewmodel.manga.volumes ?? 0)")
+
                     
-                    Text("Bought volumes: \(viewmodel.manga.boughtVolumes.count) of \(viewmodel.manga.volumes ?? 0)")
                     
                     Button("Show") {
                         if viewmodel.manga.volumes != nil {
@@ -100,13 +117,7 @@ struct MyMangaDetailView: View {
                 }
             }
             
-            //            ToolbarItem(placement: .secondaryAction) {
-            //                Button {
-            //                    // Función para guardar cambios
-            //                } label: {
-            //                    Image(systemName: "square.and.arrow.down")
-            //                }
-            //            }
+
             
         }
         .sheet(isPresented: $showVolumes) {
@@ -125,12 +136,12 @@ struct MyMangaDetailView: View {
         } message: {
             Text(viewmodel.errorMessage)
         }
-
+        
     }
 }
 
 #Preview {
     NavigationStack {
-        MyMangaDetailView(viewmodel: MangaDetailFavouriteViewModel(manga: .preview))
+        MyCollectionDetailView(viewmodel: MyCollectionDetailViewModel(manga: .preview))
     }
 }
