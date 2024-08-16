@@ -19,10 +19,6 @@
 		0E3DF3572C2730030004AB19 /* MyCollectionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3DF3562C2730030004AB19 /* MyCollectionListViewModel.swift */; };
 		0E3DF3592C2738270004AB19 /* MyCollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3DF3582C2738270004AB19 /* MyCollectionDetailView.swift */; };
 		0E555EDF2C261C77004345F6 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 0E555EDE2C261C77004345F6 /* RealityKitContent */; };
-		0E555EE12C261C77004345F6 /* VisionOSappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555EE02C261C77004345F6 /* VisionOSappApp.swift */; };
-		0E555EE32C261C77004345F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E555EE22C261C77004345F6 /* ContentView.swift */; };
-		0E555EE52C261C78004345F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E555EE42C261C78004345F6 /* Assets.xcassets */; };
-		0E555EE82C261C78004345F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E555EE72C261C78004345F6 /* Preview Assets.xcassets */; };
 		0EA1AC122C41829700C88566 /* BucketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1AC112C41829700C88566 /* BucketListView.swift */; };
 		0EA1AC142C4187D400C88566 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1AC132C4187D400C88566 /* ExploreView.swift */; };
 		0EA1AC162C42B79E00C88566 /* NewCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1AC152C42B79E00C88566 /* NewCategoriesView.swift */; };
@@ -76,12 +72,6 @@
 		0E3DF3562C2730030004AB19 /* MyCollectionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionListViewModel.swift; sourceTree = "<group>"; };
 		0E3DF3582C2738270004AB19 /* MyCollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionDetailView.swift; sourceTree = "<group>"; };
 		0E555EDA2C261C77004345F6 /* VisionOSapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionOSapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E555EDD2C261C77004345F6 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
-		0E555EE02C261C77004345F6 /* VisionOSappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOSappApp.swift; sourceTree = "<group>"; };
-		0E555EE22C261C77004345F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0E555EE42C261C78004345F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0E555EE72C261C78004345F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0E555EE92C261C78004345F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EA1AC112C41829700C88566 /* BucketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListView.swift; sourceTree = "<group>"; };
 		0EA1AC132C4187D400C88566 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		0EA1AC152C42B79E00C88566 /* NewCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoriesView.swift; sourceTree = "<group>"; };
@@ -191,34 +181,6 @@
 			name = MyCollection;
 			sourceTree = "<group>";
 		};
-		0E555EDB2C261C77004345F6 /* VisionOSapp */ = {
-			isa = PBXGroup;
-			children = (
-				0E555EE02C261C77004345F6 /* VisionOSappApp.swift */,
-				0E555EE22C261C77004345F6 /* ContentView.swift */,
-				0E555EE42C261C78004345F6 /* Assets.xcassets */,
-				0E555EE92C261C78004345F6 /* Info.plist */,
-				0E555EE62C261C78004345F6 /* Preview Content */,
-			);
-			path = VisionOSapp;
-			sourceTree = "<group>";
-		};
-		0E555EDC2C261C77004345F6 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				0E555EDD2C261C77004345F6 /* RealityKitContent */,
-			);
-			path = Packages;
-			sourceTree = "<group>";
-		};
-		0E555EE62C261C78004345F6 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0E555EE72C261C78004345F6 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		0EA3CCB62C49767D00E0780D /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,8 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				195A0C152C0F89E2008BF4A0 /* MangaTracker */,
-				0E555EDB2C261C77004345F6 /* VisionOSapp */,
-				0E555EDC2C261C77004345F6 /* Packages */,
 				195A0C142C0F89E2008BF4A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -447,8 +407,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E555EE82C261C78004345F6 /* Preview Assets.xcassets in Resources */,
-				0E555EE52C261C78004345F6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,8 +427,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E555EE32C261C77004345F6 /* ContentView.swift in Sources */,
-				0E555EE12C261C77004345F6 /* VisionOSappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

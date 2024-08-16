@@ -10,7 +10,6 @@ struct MangaTrackerApp: App {
     init() {
         customizeTabBarAppearance()
     }
-    
     var body: some Scene {
         WindowGroup {
             ZStack {
