@@ -23,6 +23,8 @@ protocol MangaProtocol {
 }
 
 
+///Este interactor tiene como particularidad el uso de la función genérica `getDataGeneric`que permite hacer el `fetch` de los datos especificados en la misma función, esperando una `URL` específica, el tipo de dato a tratar y realizando un mapeo de esos datos para que estén disponibles de acuerdo al modelo de manga que se estipuló en la app.
+
 struct MangaInteractor: MangaProtocol {
 
     func getAllMangas() async throws -> [MangaModel] {
@@ -53,10 +55,7 @@ struct MangaInteractor: MangaProtocol {
     func getMangaByAuthorPaginated(idAuthor: String, page: Int = 1, mangasPerPage: Int = 10) async throws -> [MangaModel] {
         return try await getDataGeneric(request: .mangaByAuthorURL(authorID: idAuthor, page: page, mangasPerPage: mangasPerPage), type: MangaGeneralDTO.self).items.map(\.mapToModel)
     }
-    
-    
-    
-    
+
     func getGenres() async throws -> [String] {
         return try await getDataGeneric(request: .genresURL, type: [String].self)
     }
@@ -72,9 +71,7 @@ struct MangaInteractor: MangaProtocol {
     func getAuthors() async throws -> [Author] {
         return try await getDataGeneric(request: .authorsURL, type: [Author].self)
     }
-    
-    
-    
+
     func searchMangaContains(text: String, page: Int) async throws -> [MangaModel] {
         return try await getDataGeneric(request: .searchContainsURL(text: text, page: page), type: MangaGeneralDTO.self).items.map(\.mapToModel)
     }

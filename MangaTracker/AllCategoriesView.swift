@@ -3,26 +3,24 @@ import SwiftUI
 
 struct AllCategoriesView: View {
     
-    @StateObject var viewmodel = MangaCategoriesViewModel()
+    @StateObject var viewmodel = CategoriesViewModel()
     @State private var pathCategories = NavigationPath()
     
     var body: some View {
         NavigationStack(path: $pathCategories) {
-            List(viewmodel.categories, id: \.self) { category in
+            List(viewmodel.subCategories, id: \.self) { category in
                 NavigationLink(value: category) {
                     VStack {
                         Text(category)
                     }
                 }
             }
-            .navigationDestination(for: String.self) { category in
-                MangasByCategoryView(pathCategories: $pathCategories, category: category, type: viewmodel.categoryType)
-            }
+
             .navigationDestination(for: MangaModel.self) { manga in
-                MangaDetailView(vmData: MangaDetailViewModel(manga: manga))
+                DetailView(viewmodel: DetailViewModel(manga: manga))
             }
             .navigationDestination(for: Author.self) { author in
-                MangaByAuthorView(path: $pathCategories, author: author)
+                ListByAuthorView(path: $pathCategories, author: author)
             }
             Button("Genres") {
                 viewmodel.fetchGenres()

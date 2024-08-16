@@ -1,51 +1,59 @@
-
 import SwiftUI
 
+/// Vista que muestra una lista de mangas asociados a un autor específico, es una vista simple con una lista que muestra el título del manga, el score quie tiene y un poster pequeño.
 struct ListByAuthorView: View {
     
-    @StateObject var viewmodel = MangaListViewModel()
+    @StateObject var viewmodel = ExploreViewModel()
     @Binding var path: NavigationPath
     
     var author: Author
     
     var body: some View {
-        
-        List(viewmodel.mangasByAuthor) { manga in
-            NavigationLink(value: manga) {
-                MangaCellView(manga: manga, showOwnedVolumes: false)
-                    .onAppear {
-                        viewmodel.isLastItemAuthor(manga: manga, idAuthor: author.id)
+        ZStack {
+            /// Fondo con gradiente.
+            LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            
+            ScrollView {
+                VStack {
+                    /// Muestra una lista de mangas asociados al autor.
+                    ForEach(viewmodel.mangasByAuthor) { manga in
+                        NavigationLink(value: manga) {
+                            CellView(manga: manga, showOwnedVolumes: false, isSearchListView: false)
+                                .onAppear {
+                                    /// Comprueba si es necesario cargar más mangas al llegar al final de la lista.
+                                    viewmodel.checkForMoreMangasAuthor(manga: manga, idAuthor: author.id)
+                                }
+                                .listRowBackground(Color.clear)
+                        }
                     }
-            }
-        }
-        .onAppear {
-            viewmodel.fetchMangasByAuthor(idAuthor: author.id)
-        }
-        .alert("Something went wrong", isPresented: $viewmodel.showAlert, actions: {
-            Button("Try again") {
-                viewmodel.fetchMangasByAuthor(idAuthor: author.id)
-            }
-            Button {
-                viewmodel.showAlert = false
-            } label: {
-                Text("Cancel")
-            }
-        }, message: {
-            Text(viewmodel.errorMessage)
-        })
-        .navigationTitle(author.firstName)
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    path = NavigationPath()
-                } label: {
-                    Text("Back to home")
+                }
+                .background(Color.clear)
+                .onAppear {
+                    /// Carga los mangas asociados al autor al aparecer la vista.
+                    viewmodel.fetchMangasByAuthor(idAuthor: author.id)
                 }
             }
+        
+            .alert("Something went wrong", isPresented: $viewmodel.showAlert, actions: {
+                Button("Try again") {
+                    viewmodel.fetchMangasByAuthor(idAuthor: author.id)
+                }
+                Button {
+                    viewmodel.showAlert = false
+                } label: {
+                    Text("Cancel")
+                }
+            }, message: {
+                Text(viewmodel.errorMessage)
+            })
+            
+            /// Título de la vista con el nombre del autor.
+            .navigationTitle("Author: \(author.firstName)")
+
         }
     }
 }
-
 
 #Preview {
     NavigationStack {

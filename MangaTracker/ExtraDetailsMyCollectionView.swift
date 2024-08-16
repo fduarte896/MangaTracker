@@ -1,22 +1,21 @@
 import SwiftUI
 
-/// `ExtraDetailsView` es una vista que muestra información adicional sobre un manga,
-/// incluyendo títulos en diferentes idiomas, sinopsis, puntuación, géneros, demografías y temas.
+/// `ExtraDetailsMyCollectionView` es una vista que muestra detalles adicionales sobre un manga específico en la colección del usuario.
 ///
-/// Esta vista está diseñada para funcionar tanto en iPhone como en iPad, ajustándose al dispositivo en el que se muestra.
-/// Si se utiliza en un iPhone, la vista mostrará todos los detalles de manera vertical, mientras que en un iPad,
-/// se cargará una vista específica para ese dispositivo (`ExtraDetailsiPad`).
-/// - Note: La vista organiza la información en secciones con divisores para facilitar la lectura.
-
-struct ExtraDetailsView: View {
+/// Esta es la versión para iPhone, diseñada para mostrar información como el título en diferentes idiomas, sinopsis, puntuación, géneros,
+/// demografías y temas asociados al manga. Si la vista se está ejecutando en un iPad, se cargará la versión específica para iPad (`ExtraDetailsMyCollectioniPad`).
+///
+/// - Note: La vista organiza la información en secciones con divisores para facilitar la lectura. Incluye scrolls horizontales para mostrar
+///   géneros, demografías y temas cuando hay múltiples elementos disponibles.
+struct ExtraDetailsMyCollectionView: View {
     
-    @StateObject var viewmodel: DetailViewModel
+    @StateObject var viewmodel: MyCollectionDetailViewModel
     
     var body: some View {
         if UIDevice.isIPhone {
             VStack(alignment: .leading) {
                 
-                /// Título de la sección de detalles.
+                /// Título de la sección de detalles del manga.
                 Text("Details about \(viewmodel.manga.title)")
                     .font(.title)
                 
@@ -53,10 +52,11 @@ struct ExtraDetailsView: View {
                 
                 Divider().background(Color.orangeMangaTracker)
                 
-                /// Muestra los géneros asociados al manga.
+                /// Muestra los géneros asociados al manga si están disponibles.
                 if !viewmodel.manga.genres.isEmpty {
                     Text("Genres:")
                         .bold()
+                    
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(viewmodel.manga.genres, id: \.self) { genre in
@@ -70,10 +70,11 @@ struct ExtraDetailsView: View {
                 
                 Divider().background(Color.orangeMangaTracker)
                 
-                /// Muestra las demografías asociadas al manga.
+                /// Muestra las demografías asociadas al manga si están disponibles.
                 if !viewmodel.manga.demographics.isEmpty {
                     Text("Demographics:")
                         .bold()
+                    
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(viewmodel.manga.demographics, id: \.self) { demographic in
@@ -86,11 +87,12 @@ struct ExtraDetailsView: View {
                 
                 Divider().background(Color.orangeMangaTracker)
                 
-                /// Muestra los temas asociados al manga.
+                /// Muestra los temas asociados al manga si están disponibles.
                 if !viewmodel.manga.themes.isEmpty {
                     Text("Themes")
                         .bold()
                         .font(.title2)
+                    
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(viewmodel.manga.themes, id: \.self) { theme in
@@ -100,14 +102,17 @@ struct ExtraDetailsView: View {
                         }
                     }
                 }
+                
             }
         } else if UIDevice.isIPad {
-            /// Carga la vista específica para iPad.
-            ExtraDetailsiPad(viewmodel: viewmodel)
+            /// Carga la vista específica para iPad si el dispositivo es un iPad.
+            ExtraDetailsMyCollectioniPad(viewmodel: viewmodel)
         }
     }
 }
 
 #Preview {
-    ExtraDetailsView(viewmodel: DetailViewModel(manga: .preview))
+    ScrollView{
+        ExtraDetailsMyCollectionView(viewmodel: MyCollectionDetailViewModel(manga: .preview))
+    }
 }

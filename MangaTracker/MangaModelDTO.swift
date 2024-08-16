@@ -57,6 +57,7 @@ struct MangaDTO: Codable {
             boughtVolumes: [],
             readingVolume: 0,
             isCompleted: false
+            
         )
     }
     

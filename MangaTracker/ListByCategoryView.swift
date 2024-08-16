@@ -3,7 +3,7 @@ import SwiftUI
 
 struct ListByCategoryView: View {
     
-    @StateObject var viewmodel = MangaCategoriesViewModel()
+    @StateObject var viewmodel = CategoriesViewModel()
     @Binding var pathCategories: NavigationPath
     var category: String
     var type: String
@@ -12,9 +12,9 @@ struct ListByCategoryView: View {
         
         List(viewmodel.mangasByCategory) { manga in
             NavigationLink(value: manga) {
-                MangaCellView(manga: manga, showOwnedVolumes: false)
+                CellView(manga: manga, showOwnedVolumes: false, isSearchListView: false)
                     .onAppear {
-//                        viewmodel.isLastItemCategories(manga: manga, category: category)
+//                        viewmodel.checkForMoreMangasCat(manga: manga, category: category)
              
                     }
             }
@@ -26,9 +26,11 @@ struct ListByCategoryView: View {
         .alert("Something went wrong", isPresented: $viewmodel.showAlert, presenting: viewmodel.myErrorSpecific, actions: { error in
             Button("Try again") {
                 switch error {
-                case .fetchMangasByGenre : viewmodel.fetchMangasByGenre(genre: category)
-                case .fetchMangasByTheme : viewmodel.fetchMangasByTheme(theme: category)
-                case .fetchMangasByDemographic : viewmodel.fetchMangasByDemographic(demographic: category)
+                case .fetchMangasByGenreError : viewmodel.fetchMangasByGenre(genre: category)
+                case .fetchMangasByThemeError : viewmodel.fetchMangasByTheme(theme: category)
+                case .fetchMangasByDemographicError : viewmodel.fetchMangasByDemographic(demographic: category)
+                case .checkForMoreMangasError:
+                    return
                 }
             }
             Button {

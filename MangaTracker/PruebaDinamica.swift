@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct PruebaDinamica: View {
+    
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        if horizontalSizeClass == .compact {
+            Color.gray
+        } else {
+            Color.red
+        }
+        
     }
 }
 

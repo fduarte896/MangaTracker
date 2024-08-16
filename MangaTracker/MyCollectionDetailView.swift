@@ -1,131 +1,113 @@
-
 import SwiftUI
+
+/// `MyCollectionDetailView` es una vista que muestra los detalles de un manga específico en la colección del usuario.
+///
+/// Esta vista permite al usuario ver información detallada sobre el manga, incluyendo los autores, volúmenes disponibles, y otros detalles
+/// relevantes. La vista también proporciona herramientas para gestionar la colección del manga, como marcar volúmenes como leídos
+/// y compartir o visitar el sitio web del manga.
+///
+/// - Note: La vista incluye una barra de herramientas con opciones para compartir el manga o visitar su página web.
+///   Además, maneja el seguimiento de los volúmenes y muestra mensajes de felicitaciones si la colección está completa.
+///
 
 struct MyCollectionDetailView: View {
     
     @StateObject var viewmodel: MyCollectionDetailViewModel
     
-    @State var isExpanded: Bool = false
-    @State private var showVolumes : Bool = false
-    
     var body: some View {
         ScrollView {
-            AsyncImage(url: viewmodel.manga.mainPictureURL) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 250, height: 250)
-                    .clipShape(Rectangle())
-            } placeholder: {
-                ProgressView()
-                    .controlSize(.extraLarge)
-                    .scaledToFit()
-                    .frame(width: 250, height: 250)
-            }
-            .padding()
-            
+            /// Muestra el título del manga.
             Text(viewmodel.manga.title)
                 .font(.title)
                 .bold()
-
+                .foregroundStyle(Color.orangeMangaTracker)
+                .multilineTextAlignment(.center)
+                .padding(.top, 0)
             
-            Link("Go to manga website", destination: viewmodel.manga.validURL)
-            
-            HStack{
-                Text("Authors").bold().font(.title2)
-                    .padding(.leading)
-                Spacer()
-            }
-            ScrollView(.horizontal){
-                HStack(alignment: .center){
-                    ForEach(viewmodel.manga.authors) { author in
+            /// Muestra los autores del manga.
+            HStack(alignment: .center) {
+                ForEach(viewmodel.manga.authors) { author in
+                    if viewmodel.manga.authors.count > 2 {
                         Text(author.authorCompleteName)
                             .padding(.leading)
-                            .padding(.bottom)
-                            .foregroundStyle(Color.primary)
+                            .foregroundStyle(Color.grayMangaTracker)
+                    } else {
+                        Text(author.authorCompleteName)
+                            .frame(width: UIScreen.main.bounds.width / CGFloat(viewmodel.manga.authors.count) - 20)
+                            .foregroundStyle(Color.grayMangaTracker)
+                            .multilineTextAlignment(.center)
                     }
                 }
+            }
+            .padding(.horizontal, 10)
+            .padding(.bottom)
+            
+            /// Muestra la portada del manga con un tamaño llamativo y protagonista.
+            PosterView(manga: viewmodel.manga, isCarousel: true, isiPadAndSmall: false)
+                .padding(.top, -30)
+            
+            /// Muestra detalles formateados del manga.
+            Text(viewmodel.formatMangaDetails())
+                .font(.footnote)
+                .foregroundStyle(Color.grayMangaTracker)
+            
+            if viewmodel.manga.volumes != nil {
+                /// Muestra un `GaugeView` si el manga tiene volúmenes.
+                /// Este `GaugeView` permite al usuario marcar los volúmenes que tiene en su colección y refleja el progreso en la vista.
+                GaugeView(viewmodel: viewmodel)
+                    .padding(.horizontal)
+                
+                Divider()
+                    .background(Color.grayMangaTracker)
+                
+                /// Muestra un segundo `GaugeView` para que el usuario lleve la cuenta de la lectura del manga.
+                Gauge2(viewmodel: viewmodel)
+                    .padding(.horizontal)
+            } else {
+                /// Muestra un mensaje si no hay volúmenes disponibles para el manga.
+                VStack {
+                    Image(systemName: "x.circle")
+                        .foregroundStyle(Color.orangeMangaTracker)
+                        .font(.title)
+                    Text("No volume tracking available for this manga")
+                        .foregroundStyle(Color.grayMangaTracker)
+                }
+                .frame(width: 300, height: 100)
+                .background(RoundedRectangle(cornerRadius: 9.0)
+                    .fill(Color.grayMangaTracker)
+                    .opacity(0.3))
             }
             
-            HStack {
-                VStack {
-                    Stepper(value: $viewmodel.reading, in: 0...(viewmodel.manga.volumes ?? 0)) {
-                        Text("Reading volume: \(viewmodel.reading)")
-                    }
-                    
-                    Button("Guardar Cambios") {
-                        viewmodel.persistReadingVolume()
-                    }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 40)
-                    .foregroundColor(.white)
-                    .background(LinearGradient(colors: [Color.purple, Color.cyan], startPoint: .leading, endPoint: .trailing))
-                    .clipShape(Capsule())
-                    .padding(.horizontal)
-                    
-                        
-                        /*
-                         
-                         GAUGE!!
-                         
-                         @State private var current = 67.0
-                         @State private var minValue = 50.0
-                         @State private var maxValue = 170.0
-                         
-                         
-                         var body: some View {
-                         Gauge(value: current, in: minValue...maxValue) {
-                         Image(systemName: "heart.fill")
-                         .foregroundColor(.red)
-                         } currentValueLabel: {
-                         Text("\(Int(current))")
-                         .foregroundColor(Color.green)
-                         } minimumValueLabel: {
-                         Text("\(Int(minValue))")
-                         .foregroundColor(Color.green)
-                         } maximumValueLabel: {
-                         Text("\(Int(maxValue))")
-                         .foregroundColor(Color.red)
-                         }
-                         .gaugeStyle(.circular)
-                         */
-                    
-                    Text(viewmodel.collectionCompleted ? "Congratulations, you now own all \(viewmodel.manga.volumes ?? 0) volumes and have completed the collection!" : "Bought volumes: \(viewmodel.manga.boughtVolumes.count) of \(viewmodel.manga.volumes ?? 0)")
-
-                    
-                    
-                    Button("Show") {
-                        if viewmodel.manga.volumes != nil {
-                            showVolumes = true
-                        }
-                    }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 40)
-                    .foregroundColor(.white)
-                    .background(LinearGradient(colors: [Color.purple, Color.cyan], startPoint: .leading, endPoint: .trailing))
-                    .clipShape(Capsule())
-                    .padding(.horizontal)
-                    
-                }
-            }
+            /// Muestra detalles adicionales del manga.
+            ExtraDetailsMyCollectionView(viewmodel: viewmodel)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .foregroundStyle(Color.grayMangaTracker)
+                .background(RoundedRectangle(cornerRadius: 20)
+                    .fill(Color.grayMangaTracker)
+                    .opacity(0.3))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
         }
-        .navigationTitle(viewmodel.manga.title)
+        .background(
+            LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+        )
+        /// Configura una barra de herramientas con opciones para compartir y navegar al sitio web del manga.
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                ShareLink(item: viewmodel.manga.validURL ) {
+                ShareLink(item: viewmodel.manga.validURL) {
                     Label("Share", systemImage: "square.and.arrow.up")
                 }
             }
-            
-
-            
+            ToolbarItem(placement: .primaryAction) {
+                Link(destination: viewmodel.manga.validURL, label: {
+                    Image(systemName: "globe")
+                })
+            }
         }
-        .sheet(isPresented: $showVolumes) {
-            ModalView(viewmodel: viewmodel)
-                .presentationDetents([.medium, .large])
-        }
+        /// Muestra una alerta si ocurre un error al guardar el progreso de lectura.
         .alert("Something went wrong", isPresented: $viewmodel.showAlert) {
-            Button("Try again"){
+            Button("Try again") {
                 viewmodel.persistReadingVolume()
             }
             Button {
@@ -136,7 +118,6 @@ struct MyCollectionDetailView: View {
         } message: {
             Text(viewmodel.errorMessage)
         }
-        
     }
 }
 

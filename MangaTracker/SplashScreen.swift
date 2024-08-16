@@ -5,8 +5,9 @@ struct SplashScreen: View {
     var body: some View {
         ZStack {
             
-            Image("MangaSplash")
+            Image("SplashScreen2")
                 .resizable()
+                .scaledToFill()
                 .ignoresSafeArea()
 
         }

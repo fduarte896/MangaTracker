@@ -1,18 +1,15 @@
-//
-//  UIDeviceExtension.swift
-//  MangaTracker
-//
-//  Created by Felipe Duarte on 9/08/24.
-//
+///Extensión para permitir la diferenciación en iPad e iPhone.
 
 import SwiftUI
 
-struct UIDeviceExtension: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+extension UIDevice {
+    static var isIPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+    
+    static var isIPhone: Bool {
+        UIDevice.current.userInterfaceIdiom == .phone
     }
 }
 
-#Preview {
-    UIDeviceExtension()
-}
+

@@ -1,29 +1,20 @@
 import Foundation
 
-enum NetworkError: LocalizedError {
+enum NetworkError: Error {
     case noHTTP
     case statuscode(Int)
     case general(Error)
-    
-    case genresError
-    case demographicsError
-    case themesErrors
+
     
     var errorDescription: String {
         switch self {
         case .noHTTP:
-            return "No HTTP"
+            return "We did not get any response from the server, check your internet connection and try again."
         case .statuscode(let code):
             return "Error \(code)"
         case .general(let error):
             return "Unknown \(error)"
-            
-        case .genresError:
-            return "No Genres Found"
-        case .demographicsError:
-            return "No Demographics Found"
-        case .themesErrors:
-            return "No Themes Found"
+
         }
     }
 }
