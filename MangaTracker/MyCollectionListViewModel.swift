@@ -11,7 +11,7 @@ final class MyCollectionListViewModel: ObservableObject {
     /// Consulta de búsqueda utilizada para filtrar los mangas en la colección.
     @Published var searchQueryCollection = ""
     
-    /// Mensaje de error que se muestra en caso de fallo en la carga o modificación de la colección.
+    
     @Published var errorMessage: String = ""
     
     /// Indica si la búsqueda fue exitosa.
@@ -20,7 +20,7 @@ final class MyCollectionListViewModel: ObservableObject {
     /// Texto buscado por el usuario.
     @Published var searchedText = ""
     
-    /// Indica si se debe mostrar una alerta en la vista.
+    
     @Published var showAlert: Bool = false
     
     private let interactor: LocalProtocol
@@ -95,8 +95,6 @@ final class MyCollectionListViewModel: ObservableObject {
     }
 }
 
-/// Enum que representa los errores posibles durante la carga o modificación de la colección de mangas.
-/// Proporciona descripciones localizadas para cada error.
 enum CollectionErrors: LocalizedError {
     case loadDataError(Error)
     case saveDataError(Error)

@@ -1,7 +1,6 @@
 import SwiftUI
 
 /// `TabItem` es una estructura que define los elementos de la barra de navegación o tab bar de la aplicación.
-/// Cada `TabItem` incluye un título, un ícono de sistema y una vista de destino.
 struct TabItem {
     let title: String
     let systemImage: String
@@ -9,7 +8,6 @@ struct TabItem {
 }
 
 /// `tabItems` es un array que contiene los elementos de la tab bar.
-/// Cada elemento corresponde a una de las principales secciones de la aplicación: Explore, My Collection, y Bucket List.
 let tabItems = [
     TabItem(title: "Explore", systemImage: "magnifyingglass", destination: AnyView(ExploreView())),
     TabItem(title: "My Collection", systemImage: "magazine", destination: AnyView(MyCollectionListView())),
@@ -27,7 +25,7 @@ struct MainTabItemView: View {
                 // Landscape: Mostrar barra lateral
                 NavigationSplitView {
                     ZStack {
-                        LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+                        Color.softWhiteBackground
                             .ignoresSafeArea()
                         
                         VStack(alignment: .leading) {
@@ -74,7 +72,7 @@ struct MainTabItemView: View {
                             Label("Bucket List", systemImage: "bookmark")
                         }
                 }
-                .tint(Color.orangeMangaTracker)
+                .foregroundStyle(Color.blueMangaTracker)
             }
         }
     }

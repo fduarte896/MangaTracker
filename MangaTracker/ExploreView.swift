@@ -1,5 +1,13 @@
 import SwiftUI
 
+enum MangaCategory: String, CaseIterable {
+    
+    case genres = "Genres"
+    case demographics = "Demographics"
+    case themes = "Themes"
+    
+}
+
 /// `ExploreView` es la vista principal para la exploración de mangas. Muestra una lista de los mejores mangas, permite la navegación entre diferentes categorías y ofrece un carrusel de mangas aleatorios en la parte superior.
 struct ExploreView: View {
     
@@ -7,9 +15,8 @@ struct ExploreView: View {
     @StateObject var viewmodelColl = MyCollectionListViewModel()
     @StateObject var viewmodelBucket = BucketListViewModel()
     
-    /// Array de categorías disponibles para explorar.
-    var arrayCats: [String] = ["Genres", "Demographics", "Themes"]
-
+    var arrayWithCategories : [MangaCategory] = MangaCategory.allCases
+    
     @State private var path = NavigationPath()
     @State private var currentIndex = 0
     
@@ -18,7 +25,7 @@ struct ExploreView: View {
     
     /// Configuración del grid para mostrar mangas en una cuadrícula.
     let gridMangas: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
-
+    
     /// Identificación del tipo de dispositivo (iPhone o iPad).
     let deviceType = UIDevice.current.userInterfaceIdiom
     
@@ -30,19 +37,17 @@ struct ExploreView: View {
                 ExploreViewiPad()
             } else {
                 ZStack {
-                    /// Fondo con gradiente.
-                    LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
-                        .ignoresSafeArea()
+                    Color.softWhiteBackground.ignoresSafeArea()
                     
                     Group {
                         /// Mensaje de "No Mangas Found" cuando no se encuentran resultados en la búsqueda.
                         if viewmodelExplore.successSearch == false {
                             ContentUnavailableView("No Mangas Found", systemImage: "popcorn", description: Text("We couldn't find any manga called \(viewmodelExplore.searchedText)"))
-                                .foregroundStyle(Color.grayMangaTracker)
+                                .foregroundStyle(Color.darkGrayMangaTracker)
                         } else {
                             ZStack {
                                 /// Muestra una lista de mangas cuando hay una búsqueda activa.
-                                if viewmodelExplore.isList {
+                                if viewmodelExplore.listNeeded {
                                     List(viewmodelExplore.mangas) { manga in
                                         NavigationLink(value: manga) {
                                             CellView(manga: manga, showOwnedVolumes: false, isSearchListView: true)
@@ -55,30 +60,41 @@ struct ExploreView: View {
                                 } else {
                                     /// Vista principal con carrusel, estadísticas y categorías.
                                     ScrollView {
-                                        HStack(spacing: 40) {
-                                            HStack {
-                                                Text("Your Collection:")
-                                                Text(" \(viewmodelColl.loadedMyCollectionMangas.count)")
+                                        HStack(spacing: 20) {
+                                            NavigationLink(destination: MyCollectionListView()) {
+                                                HStack {
+                                                    Text("Your Collection:")
+                                                    Text(" \(viewmodelColl.loadedMyCollectionMangas.count)")
+                                                }
                                             }
-                                            HStack {
-                                                Text("Your Bucket List:")
-                                                Text(" \(viewmodelBucket.filteredBucketMangas.count)")
+                                            NavigationLink(destination: BucketListView()) {
+                                                HStack {
+                                                    Text("Your Bucket List:")
+                                                    Text(" \(viewmodelBucket.filteredBucketMangas.count)")
+                                                }
                                             }
                                         }
-                                        .foregroundStyle(Color.orangeMangaTracker)
+                                        .foregroundStyle(Color.blueMangaTracker)
                                         .bold()
-
+                                        
                                         /// Carrusel de mangas.
                                         TabView(selection: $currentIndex) {
                                             ForEach(viewmodelExplore.mangas.indices, id: \.self) { index in
                                                 NavigationLink(value: viewmodelExplore.mangas[index]) {
-                                                    PosterView(manga: viewmodelExplore.mangas[index], isCarousel: true, isiPadAndSmall: false)
-                                                        .tag(index)
+                                                    VStack {
+                                                        PosterView(manga: viewmodelExplore.mangas[index], isCarousel: true, isiPadAndSmall: false)
+                                                            .tag(index)
+                                                        
+                                                        Text(viewmodelExplore.mangas[index].title)
+                                                            .padding(.top, -30)
+                                                            .foregroundStyle(Color.orangeMangaTracker)
+                                                    }
                                                 }
                                             }
                                         }
                                         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                                        .frame(height: 300)
+                                        .frame(height: 360)
+                                        .padding(.top, -15)
                                         .onReceive(timer) { _ in
                                             if viewmodelExplore.mangas.count > 0 {
                                                 withAnimation {
@@ -95,24 +111,23 @@ struct ExploreView: View {
                                             VStack {
                                                 Divider()
                                                 HStack(spacing: 30) {
-                                                    ForEach(arrayCats, id: \.self) { category in
-                                                        NavigationLink(value: category) {
-                                                            if category == "Genres" {
+                                                    ForEach(arrayWithCategories, id: \.self) { category in
+                                                        NavigationLink(value: category.rawValue) {
+                                                            switch category {
+                                                            case .genres:
                                                                 VStack {
                                                                     Image(systemName: "books.vertical")
-                                                                    Text(category)
-                                                                        .bold()
+                                                                    Text(category.rawValue).bold()
                                                                 }
-                                                            } else if category == "Demographics" {
+                                                            case .demographics:
                                                                 VStack {
                                                                     Image(systemName: "person.3")
-                                                                    Text(category)
-                                                                        .bold()
+                                                                    Text(category.rawValue).bold()
                                                                 }
-                                                            } else if category == "Themes" {
+                                                            case .themes:
                                                                 VStack {
                                                                     Image(systemName: "tag")
-                                                                    Text(category).bold()
+                                                                    Text(category.rawValue).bold()
                                                                 }
                                                             }
                                                         }
@@ -122,11 +137,12 @@ struct ExploreView: View {
                                                 Divider()
                                             }
                                         }
+                                            .foregroundStyle(Color.blueMangaTracker)
                                         
                                         /// Sección de top 10 mangas.
                                         VStack(alignment: .center) {
                                             Text("**Top 10 Mangas**")
-                                                .foregroundStyle(Color.grayMangaTracker)
+                                                .foregroundStyle(Color(red: 51/255, green: 51/255, blue: 51/255))
                                                 .padding(.horizontal)
                                                 .font(.title)
                                             LazyVGrid(columns: gridMangas, spacing: 20) {
@@ -137,7 +153,7 @@ struct ExploreView: View {
                                                                 TopMangaPosterView(manga: manga, topIndex: index)
                                                             }
                                                             Text("Score: \(manga.score.formatted())")
-                                                                .foregroundColor(Color.grayMangaTracker)
+                                                                .foregroundColor(Color.darkGrayMangaTracker)
                                                                 .bold()
                                                         }
                                                     }
@@ -177,6 +193,7 @@ struct ExploreView: View {
                             if let lastManga = viewmodelExplore.theLastManga {
                                 viewmodelExplore.checkForMoreMangas(lastManga: lastManga)
                             }
+                        case .searchError : viewmodelExplore.search(text: viewmodelExplore.searchedText)
                         default:
                             viewmodelExplore.fetchAllMangas()
                             viewmodelExplore.fetchBestMangas()

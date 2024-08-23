@@ -3,8 +3,6 @@ import Foundation
 // URLs base:
 let URLBaseList: URL = URL(string: "https://mymanga-acacademy-5607149ebe3d.herokuapp.com/list")!
 let URLBaseSearch: URL = URL(string: "https://mymanga-acacademy-5607149ebe3d.herokuapp.com/search")!
-let URLBaseUsers: URL = URL(string: "https://mymanga-acacademy-5607149ebe3d.herokuapp.com/users")!
-let URLBaseCollection: URL = URL(string: "https://mymanga-acacademy-5607149ebe3d.herokuapp.com/collection")!
 
 ///Endpoints específicos para el llamado a red necesario para la situación. Los `print` sirven como guía para saber qué endpoint se está llamando en cada situación.
 extension URL {

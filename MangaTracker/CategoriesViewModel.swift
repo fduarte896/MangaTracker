@@ -21,10 +21,10 @@ final class CategoriesViewModel: ObservableObject {
     /// Tipo de categoría actualmente seleccionada (e.g., "Genres", "Themes", "Demographics").
     @Published var categoryType = ""
     
-    /// Mensaje de error que se muestra en caso de fallo en la carga de datos.
+    
     @Published var errorMessage: String = ""
     
-    /// Indica si se debe mostrar una alerta en la vista.
+    
     @Published var showAlert: Bool = false
     
     /// Último manga renderizado en la lista.
@@ -35,10 +35,10 @@ final class CategoriesViewModel: ObservableObject {
     
     private let interactor: MangaProtocol
     
-    /// Variable que almacena el tipo de error general ocurrido durante la carga de categorías.
+    
     @Published var myError: CategoriesListError?
     
-    /// Variable que almacena el tipo de error específico ocurrido durante la carga de subcategorías.
+    
     @Published var myErrorSpecific: CategoriesSpecificError?
     
     /// Inicializa el `CategoriesViewModel` con un interactor para manejar las peticiones de datos.
@@ -254,8 +254,6 @@ enum CategoriesListError: LocalizedError {
     }
 }
 
-/// Enum que representa los errores generales que pueden ocurrir durante la carga de subcategorías.
-/// Proporciona descripciones localizadas para cada error.
 enum CategoriesSpecificError: LocalizedError {
     case fetchMangasByGenreError
     case fetchMangasByDemographicError

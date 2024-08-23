@@ -19,6 +19,8 @@ struct ExtraDetailsMyCollectioniPad: View {
             /// Título de la sección de detalles del manga.
             Text("Details about \(viewmodel.manga.title)")
                 .font(.title)
+                .foregroundStyle(Color.darkGrayMangaTracker)
+                .bold()
             
             Divider().background(Color.orangeMangaTracker)
             

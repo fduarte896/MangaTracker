@@ -6,13 +6,11 @@ import Foundation
 /// ya esté en una de estas listas.
 final class DetailViewModel: ObservableObject {
     
-    /// El manga actual que está siendo mostrado en la vista de detalles.
+    
     var manga: MangaModel
-    
-    /// Array que almacena los mangas en la colección del usuario.
+
     var savedMyCollectionMangas: [MangaModel] = []
-    
-    /// Array que almacena los mangas en la Bucket List del usuario.
+
     var savedBucketMangas: [MangaModel] = []
     
     /// Indica si el botón para añadir a la colección debería estar deshabilitado.
@@ -20,17 +18,13 @@ final class DetailViewModel: ObservableObject {
     
     /// Indica si el botón para añadir a la Bucket List debería estar deshabilitado.
     @Published var isMyBucketButtonDisable = false
-    
-    /// Mensaje de error que se muestra en caso de fallo en la carga de datos.
+
     @Published var errorMessage: String = ""
     
-    /// Indica si se debe mostrar una alerta en la vista.
     @Published var showAlert: Bool = false
     
-    /// Indica si algún botón ha sido presionado.
     @Published var isPressed: Bool = false
-    
-    /// Variable que almacena el tipo de error ocurrido en la vista de detalles.
+        
     @Published var myError: DetailViewErrors?
     
     private let interactor: LocalProtocol
@@ -152,8 +146,6 @@ final class DetailViewModel: ObservableObject {
     }
 }
 
-/// Enum que representa los errores posibles en la vista de detalles.
-/// Proporciona descripciones localizadas para cada error.
 enum DetailViewErrors: LocalizedError {
     case saveToMyCollection
     case checkMyCollection

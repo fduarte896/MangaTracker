@@ -32,11 +32,11 @@ struct BucketListDetailView: View {
                                 if viewmodel.manga.authors.count > 2 {
                                     Text(author.authorCompleteName)
                                         .padding(.leading)
-                                        .foregroundStyle(Color.orangeMangaTracker)
+                                        .foregroundStyle(Color.darkGrayMangaTracker)
                                 } else {
                                     Text(author.authorCompleteName)
                                         .frame(width: UIScreen.main.bounds.width / CGFloat(viewmodel.manga.authors.count) - 20)
-                                        .foregroundStyle(Color.grayMangaTracker)
+                                        .foregroundStyle(Color.darkGrayMangaTracker)
                                         .multilineTextAlignment(.center)
                                 }
                             }
@@ -54,7 +54,7 @@ struct BucketListDetailView: View {
                 /// Detalles del manga formateados.
                 Text(viewmodel.formatMangaDetails())
                     .font(.footnote)
-                    .foregroundStyle(Color.grayMangaTracker)
+                    .foregroundStyle(Color.darkGrayMangaTracker)
                 
                 /// Botón para agregar el manga a la colección del usuario.
                 Button {
@@ -66,9 +66,10 @@ struct BucketListDetailView: View {
                 } label: {
                     VStack {
                         Image(systemName: viewmodel.isMyCollectionButtonDisable ? "checkmark" : "plus")
-                            .foregroundStyle(Color.orangeMangaTracker)
+                            .foregroundStyle(Color.blueMangaTracker)
                         Text(viewmodel.isMyCollectionButtonDisable ? "Added to My collection" : "My Collection")
                             .font(.footnote)
+                            .foregroundStyle(Color.darkGrayMangaTracker)
                     }
                 }
                 .foregroundStyle(Color.grayMangaTracker)
@@ -79,10 +80,11 @@ struct BucketListDetailView: View {
                     .multilineTextAlignment(.leading)
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(Color.grayMangaTracker)
+                    .background(Color.grayMangaTracker.opacity(0.3))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .lineLimit(isExpanded ? .max : 2)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+                    .foregroundStyle(Color.darkGrayMangaTracker)
                 
                 Button {
                     withAnimation {
@@ -96,15 +98,14 @@ struct BucketListDetailView: View {
                 ExtraDetailsView(viewmodel: viewmodel)
                     .padding()
                     .frame(width: 400)
-                    .foregroundStyle(Color.grayMangaTracker)
+                    .foregroundStyle(Color.darkGrayMangaTracker)
                     .background(RoundedRectangle(cornerRadius: 20)
                         .fill(Color.grayMangaTracker)
                         .opacity(0.3))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             .background(
-                LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
-            )
+                Color.softWhiteBackground            )
             .onAppear {
                 viewmodel.checkMyCollection()
             }

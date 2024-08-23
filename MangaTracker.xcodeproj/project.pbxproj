@@ -24,13 +24,13 @@
 		0EA1AC162C42B79E00C88566 /* NewCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1AC152C42B79E00C88566 /* NewCategoriesView.swift */; };
 		0EA3CCB82C497CB900E0780D /* BucketListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3CCB72C497CB900E0780D /* BucketListViewModel.swift */; };
 		0EB6CD542C49C23700D3EDF5 /* BucketListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB6CD532C49C23700D3EDF5 /* BucketListDetailView.swift */; };
-		0EC2ACFB2C5D318300F94D5F /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC2ACFA2C5D318300F94D5F /* GaugeView.swift */; };
-		0EC2ACFD2C5D443500F94D5F /* Gauge2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC2ACFC2C5D443500F94D5F /* Gauge2.swift */; };
+		0EC2ACFB2C5D318300F94D5F /* GaugeVolumesOwnedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC2ACFA2C5D318300F94D5F /* GaugeVolumesOwnedView.swift */; };
+		0EC2ACFD2C5D443500F94D5F /* GaugeVolumesReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC2ACFC2C5D443500F94D5F /* GaugeVolumesReadView.swift */; };
 		0EC2ACFF2C5D6CC700F94D5F /* ExtraDetailsMyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC2ACFE2C5D6CC700F94D5F /* ExtraDetailsMyCollectionView.swift */; };
 		0ED72F462C5AB2E300658521 /* ExtraDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED72F452C5AB2E300658521 /* ExtraDetailsView.swift */; };
 		0EE741B22C237537004B8ED5 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE741B12C237537004B8ED5 /* ModalView.swift */; };
 		0EED15F82C2F027700EBA9FC /* LocalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED15F72C2F027700EBA9FC /* LocalInteractor.swift */; };
-		0EF6C2482C6252D8006A5EC3 /* CircularGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6C2472C6252D8006A5EC3 /* CircularGaugeView.swift */; };
+		0EF6C2482C6252D8006A5EC3 /* GaugeScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6C2472C6252D8006A5EC3 /* GaugeScoreView.swift */; };
 		0EFCCDEE2C4C172900CAE452 /* TopMangaPosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFCCDED2C4C172900CAE452 /* TopMangaPosterView.swift */; };
 		19038D312C1B75B300F41F4A /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19038D302C1B75B300F41F4A /* MyCollectionView.swift */; };
 		19038D332C1D083B00F41F4A /* MangaInteractorPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19038D322C1D083B00F41F4A /* MangaInteractorPreview.swift */; };
@@ -77,13 +77,13 @@
 		0EA1AC152C42B79E00C88566 /* NewCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoriesView.swift; sourceTree = "<group>"; };
 		0EA3CCB72C497CB900E0780D /* BucketListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListViewModel.swift; sourceTree = "<group>"; };
 		0EB6CD532C49C23700D3EDF5 /* BucketListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListDetailView.swift; sourceTree = "<group>"; };
-		0EC2ACFA2C5D318300F94D5F /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
-		0EC2ACFC2C5D443500F94D5F /* Gauge2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gauge2.swift; sourceTree = "<group>"; };
+		0EC2ACFA2C5D318300F94D5F /* GaugeVolumesOwnedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeVolumesOwnedView.swift; sourceTree = "<group>"; };
+		0EC2ACFC2C5D443500F94D5F /* GaugeVolumesReadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeVolumesReadView.swift; sourceTree = "<group>"; };
 		0EC2ACFE2C5D6CC700F94D5F /* ExtraDetailsMyCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraDetailsMyCollectionView.swift; sourceTree = "<group>"; };
 		0ED72F452C5AB2E300658521 /* ExtraDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraDetailsView.swift; sourceTree = "<group>"; };
 		0EE741B12C237537004B8ED5 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		0EED15F72C2F027700EBA9FC /* LocalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalInteractor.swift; sourceTree = "<group>"; };
-		0EF6C2472C6252D8006A5EC3 /* CircularGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGaugeView.swift; sourceTree = "<group>"; };
+		0EF6C2472C6252D8006A5EC3 /* GaugeScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeScoreView.swift; sourceTree = "<group>"; };
 		0EFCCDED2C4C172900CAE452 /* TopMangaPosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMangaPosterView.swift; sourceTree = "<group>"; };
 		19038D302C1B75B300F41F4A /* MyCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionView.swift; sourceTree = "<group>"; };
 		19038D322C1D083B00F41F4A /* MangaInteractorPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaInteractorPreview.swift; sourceTree = "<group>"; };
@@ -150,13 +150,13 @@
 			isa = PBXGroup;
 			children = (
 				0E27CEDC2C54084C00F8FACE /* PosterView.swift */,
+				0EFCCDED2C4C172900CAE452 /* TopMangaPosterView.swift */,
 				19940AC82C139ABE00AE8F05 /* CellView.swift */,
 				0E342EBC2C6BB2A9009A66AF /* CellViewiPad.swift */,
-				0EFCCDED2C4C172900CAE452 /* TopMangaPosterView.swift */,
 				19CB18212C332D9D005DB08C /* SplashScreen.swift */,
-				0EC2ACFA2C5D318300F94D5F /* GaugeView.swift */,
-				0EC2ACFC2C5D443500F94D5F /* Gauge2.swift */,
-				0EF6C2472C6252D8006A5EC3 /* CircularGaugeView.swift */,
+				0EC2ACFA2C5D318300F94D5F /* GaugeVolumesOwnedView.swift */,
+				0EC2ACFC2C5D443500F94D5F /* GaugeVolumesReadView.swift */,
+				0EF6C2472C6252D8006A5EC3 /* GaugeScoreView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -455,14 +455,14 @@
 				19038D372C1DE04F00F41F4A /* MainTabItemView.swift in Sources */,
 				0EA3CCB82C497CB900E0780D /* BucketListViewModel.swift in Sources */,
 				0EE741B22C237537004B8ED5 /* ModalView.swift in Sources */,
-				0EC2ACFB2C5D318300F94D5F /* GaugeView.swift in Sources */,
+				0EC2ACFB2C5D318300F94D5F /* GaugeVolumesOwnedView.swift in Sources */,
 				195A0C322C0F8B88008BF4A0 /* MangaPreview.swift in Sources */,
 				19038D392C1DF0EE00F41F4A /* DetailViewModel.swift in Sources */,
 				195A0C412C0F8CDC008BF4A0 /* JSONDecoder.swift in Sources */,
 				195A0C3F2C0F8CB8008BF4A0 /* NetworkErrors.swift in Sources */,
 				195A0C172C0F89E2008BF4A0 /* MangaTrackerApp.swift in Sources */,
 				195A0C302C0F8AC3008BF4A0 /* ExploreViewModel.swift in Sources */,
-				0EC2ACFD2C5D443500F94D5F /* Gauge2.swift in Sources */,
+				0EC2ACFD2C5D443500F94D5F /* GaugeVolumesReadView.swift in Sources */,
 				19940AC72C13920300AE8F05 /* URLQueryItem.swift in Sources */,
 				0EED15F82C2F027700EBA9FC /* LocalInteractor.swift in Sources */,
 				19940AC92C139ABE00AE8F05 /* CellView.swift in Sources */,
@@ -470,7 +470,7 @@
 				0E3DF3572C2730030004AB19 /* MyCollectionListViewModel.swift in Sources */,
 				0ED72F462C5AB2E300658521 /* ExtraDetailsView.swift in Sources */,
 				195A0C342C0F8B9D008BF4A0 /* MangaInteractor.swift in Sources */,
-				0EF6C2482C6252D8006A5EC3 /* CircularGaugeView.swift in Sources */,
+				0EF6C2482C6252D8006A5EC3 /* GaugeScoreView.swift in Sources */,
 				19CB18222C332D9D005DB08C /* SplashScreen.swift in Sources */,
 				0E342EB52C6BA31C009A66AF /* ExploreViewiPad.swift in Sources */,
 				19038D312C1B75B300F41F4A /* MyCollectionView.swift in Sources */,

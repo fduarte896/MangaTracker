@@ -5,86 +5,92 @@ import SwiftUI
 struct PagerView: View {
     
     @Binding var isFirstLaunch: Bool
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         TabView {
             /// Primer contenido: Introducción a la sección de exploración de mangas.
             ContentUnavailableView(label: {
-                VStack{
-                    HStack{
-                        Image("ExploreViewIMG")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 250, height: 480)
-                            .border(Color.black)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                            .padding(.bottom)
-                    }
+                VStack {
+                    Button("Skip") {
+                        dismiss()
+                    }.font(.footnote).foregroundStyle(Color.blueMangaTracker)
+                    Text("Explore View")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .padding(.bottom)
+
+                    Image("ExploreViewIMG")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: UIDevice.isIPad ? 300 : 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .padding(.bottom)
                 }
             }, description: {
-                Label("Discover a vast collection of mangas, including various categories that cater to your unique tastes", systemImage: "checkmark")
+                Label("Discover a vast collection of mangas, including various categories that cater to your unique tastes, and the famous top 10.", systemImage: "checkmark")
                     .frame(maxWidth: .infinity)
                     .font(UIDevice.isIPad ? /*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/ : .headline)
-                Label("Browse the top 10 most popular mangas", systemImage: "checkmark")
-                    .frame(maxWidth: .infinity)
-                    .font(UIDevice.isIPad ? /*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/ : .headline)
+                
             }, actions: {
-                Label("Swipe down to skip", systemImage: "lightbulb.max")
-                    .frame(width: 300)
-                    .background(Color.orangeMangaTracker)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .foregroundStyle(Color.grayMangaTracker)
-                    .font(UIDevice.isIPad ? /*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/ : .headline)
+
             })
+            
             
             /// Segundo contenido: Introducción a la gestión de la colección de mangas del usuario.
             ContentUnavailableView(label: {
-                HStack{
+                Button("Skip") {
+                    dismiss()
+                }.font(.footnote).foregroundStyle(Color.blueMangaTracker)
+                    Text("My Collection/Bucket List")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .padding(.bottom)
                     Image("MyCollectionIMG")
                         .resizable()
-                        .scaledToFill()
-                        .frame(width: 250, height: 480)
+                        .scaledToFit()
+                        .frame(width: UIDevice.isIPad ? 300 : 200)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
-                }
+                        .padding(.bottom)
+                
             }, description: {
-                Label("Effortlessly manage and explore your manga collection", systemImage: "checkmark")
+                Label("Effortlessly manage and explore your **manga collection** and **bucket list**: search, reorganize and delete your mangas", systemImage: "checkmark")
                     .frame(maxWidth: .infinity)
                     .font(UIDevice.isIPad ? /*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/ : .headline)
+                
             }, actions: {
-                Label("Swipe down to skip", systemImage: "lightbulb.max")
-                    .frame(width: 300)
-                    .background(Color.orangeMangaTracker)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .foregroundStyle(Color.grayMangaTracker)
-                    .font(UIDevice.isIPad ? /*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/ : .headline)
+
             })
             
             /// Tercer contenido: Introducción a los detalles de la colección y el seguimiento del progreso de lectura.
             ContentUnavailableView(label: {
+                Button("Skip") {
+                    dismiss()
+                }.font(.footnote).foregroundStyle(Color.blueMangaTracker)
+                Text("My Collection View")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .padding(.bottom)
                 Image("CollectionDetailIMG")
                     .resizable()
-                    .scaledToFill()
-                    .frame(width: 250, height: 480)
+                    .scaledToFit()
+                    .frame(width: UIDevice.isIPad ? 300 : 200)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .padding(.bottom)
+                
             }, description: {
                 Label("View detailed information about each manga in your collection, log the volumes you own, and track your reading progress.", systemImage: "checkmark")
                     .frame(maxWidth: .infinity)
                     .font(UIDevice.isIPad ? /*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/ : .headline)
             }, actions: {
-                Label("Swipe down to skip", systemImage: "lightbulb.max")
-                    .frame(width: 300)
-                    .background(Color.orangeMangaTracker)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .foregroundStyle(Color.grayMangaTracker)
-                    .font(UIDevice.isIPad ? /*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/ : .headline)
+
             })
             
         }
-        .padding(.horizontal)
-        .foregroundStyle(Color.orangeMangaTracker)
+        //        .padding(.horizontal)
+        .foregroundStyle(Color.darkGrayMangaTracker)
+        .bold()
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .always))
-        .background(Color.gray.opacity(0.7))
+        .background(Color.softWhiteBackground.opacity(0.5))
+
     }
 }
 

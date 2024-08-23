@@ -33,24 +33,30 @@ struct CellView: View {
                         .bold()
                         .multilineTextAlignment(.leading)
                         .lineLimit(isSearchListView ? 4 : 2)
-                        .foregroundStyle(Color.orangeMangaTracker)
+                        .foregroundStyle(Color.darkGrayMangaTracker)
                     
                     /// Progreso de la colección del usuario (si se habilita y se dispone de los volúmenes).
                     if showOwnedVolumes, let numberMangas = manga.volumes {
                         ProgressView(value: manga.collectionProgress) {
                             Text("Owned volumes: ")
-                                .foregroundStyle(Color.grayMangaTracker)
+                                .foregroundStyle(Color.darkGrayMangaTracker)
                         } currentValueLabel: {
                             Text("\(manga.boughtVolumes.count) out of \(numberMangas)")
-                                .foregroundStyle(Color.grayMangaTracker)
+                                .foregroundStyle(Color.darkGrayMangaTracker)
+                        }
+                    } else if showOwnedVolumes {
+                        ProgressView(value: manga.collectionProgress) {
+                            Text("No volumes reported").foregroundStyle(Color.darkGrayMangaTracker)
+                        } currentValueLabel: {
+                            Text("Volumes tracking not available")
+                                .foregroundStyle(Color.darkGrayMangaTracker)
                         }
                     }
                     
-                    /// Vista de puntaje circular (si el puntaje es diferente de 0)
-                    if manga.score != 0 {
-                        CircularGaugeView(manga: manga)
+
+                        GaugeScoreView(manga: manga)
                             .padding(.leading, 50)
-                    }
+
                 }
                 Spacer()
                 PosterView(manga: manga, isCarousel: false, isiPadAndSmall: true)

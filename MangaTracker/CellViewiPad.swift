@@ -33,26 +33,26 @@ struct CellViewiPad: View {
                     .foregroundStyle(Color.orangeMangaTracker)
                 
                 /// Muestra el progreso de la colección de volúmenes del usuario si está habilitado.
-                if showOwnedVolumes {
-                    ProgressView(value: manga.collectionProgress, label: {
+                if showOwnedVolumes, let numberMangas = manga.volumes {
+                    ProgressView(value: manga.collectionProgress) {
                         Text("Owned volumes: ")
-                            .foregroundStyle(Color.grayMangaTracker)
-                    }, currentValueLabel: {
-                        if let numberMangas = manga.volumes {
-                            Text("\(manga.boughtVolumes.count) out of " + String(numberMangas))
-                                .foregroundStyle(Color.grayMangaTracker)
-                        } else {
-                            Text("Volume tracking is not available yet for this manga, sorry.")
-                                .foregroundStyle(Color.grayMangaTracker)
-                        }
-                    })
+                            .foregroundStyle(Color.darkGrayMangaTracker)
+                    } currentValueLabel: {
+                        Text("\(manga.boughtVolumes.count) out of \(numberMangas)")
+                            .foregroundStyle(Color.darkGrayMangaTracker)
+                    }
+                } else if showOwnedVolumes {
+                    ProgressView(value: manga.collectionProgress) {
+                        Text("No volumes reported").foregroundStyle(Color.darkGrayMangaTracker)
+                    } currentValueLabel: {
+                        Text("Volumes tracking not available")
+                            .foregroundStyle(Color.darkGrayMangaTracker)
+                    }
                 }
                 
-                /// Muestra un puntaje circular si el manga tiene una puntuación diferente de 0.
-                if manga.score != 0 {
-                    CircularGaugeView(manga: manga)
-                        .padding(.leading, 50)
-                }
+                GaugeScoreView(manga: manga)
+                    .padding(.leading, 50)
+                
             }
             Spacer()
             /// Muestra la portada del manga.

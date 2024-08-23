@@ -8,19 +8,16 @@ final class BucketListViewModel: ObservableObject {
     /// Array que almacena los mangas en la lista de deseos del usuario.
     @Published var loadedBucketMangas: [MangaModel] = []
     
-    /// Consulta de búsqueda utilizada para filtrar los mangas en la lista de deseos.
+    /// Consulta de búsqueda utilizada para filtrar los mangas en la bucket list.
     @Published var searchBucketManga = ""
-    
-    /// Mensaje de error que se muestra en caso de fallo en la carga o modificación de la lista de deseos.
+        
     @Published var errorMessage: String = ""
     
     /// Indica si la búsqueda fue exitosa.
     @Published var successSearch = true
     
-    /// Texto buscado por el usuario.
     @Published var searchedText = ""
-    
-    /// Indica si se debe mostrar una alerta en la vista.
+
     @Published var showAlert = false
     
     private let interactor: LocalProtocol
@@ -90,8 +87,6 @@ final class BucketListViewModel: ObservableObject {
     }
 }
 
-/// Enum para manejar errores relacionados con la lista de deseos del usuario.
-/// Proporciona descripciones localizadas para cada error.
 enum BucketErrors: LocalizedError {
     case loadDataError(Error)
     case saveDataError(Error)

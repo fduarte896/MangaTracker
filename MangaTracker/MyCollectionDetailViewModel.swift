@@ -6,7 +6,6 @@ import Foundation
 /// Incluye funcionalidades para verificar si la colección está completa, mostrar el volumen que está leyendo, y guardar el progreso de lectura.
 final class MyCollectionDetailViewModel: ObservableObject {
     
-    /// El manga que está siendo mostrado en la vista de detalles.
     var manga: MangaModel
     
     /// Array que almacena los mangas favoritos guardados por el usuario.
@@ -17,14 +16,11 @@ final class MyCollectionDetailViewModel: ObservableObject {
     
     /// Array que almacena los volúmenes comprados por el usuario.
     @Published var volumes: [Int] = []
-    
-    /// Mensaje de error que se muestra en caso de fallo en la carga o modificación de la colección.
+
     @Published var errorMessage: String = ""
     
-    /// Indica si se debe mostrar una alerta en la vista.
     @Published var showAlert: Bool = false
     
-    /// Indica si la colección del manga está completa.
     @Published var collectionCompleted = false
     
     private let interactor: LocalProtocol
@@ -136,8 +132,7 @@ final class MyCollectionDetailViewModel: ObservableObject {
         }
     }
     
-    /// Enum que representa los errores posibles durante la carga o modificación de los detalles del manga.
-    /// Proporciona descripciones localizadas para cada error.
+   
     enum MyCollectionDetailError: LocalizedError {
         case loadDataError
         case saveDataError

@@ -17,7 +17,7 @@ struct ModalView: View {
     var body: some View {
         ZStack {
             /// Fondo con gradiente.
-            LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+            Color.softWhiteBackground
                 .ignoresSafeArea()
             
             ScrollView {
@@ -25,7 +25,7 @@ struct ModalView: View {
                 Text("Select the volumes you own")
                     .font(.title)
                     .bold()
-                    .foregroundStyle(Color.grayMangaTracker)
+                    .foregroundStyle(Color.darkGrayMangaTracker)
                 
                 /// Verifica si el manga tiene volúmenes disponibles.
                 if let volumes = viewmodel.manga.volumes {
@@ -40,7 +40,7 @@ struct ModalView: View {
                                 Text(String(volumen))
                                     .foregroundStyle(.white)
                                     .frame(width: 50, height: 50)
-                                    .background(viewmodel.volumes.contains(volumen) ? Color.orangeMangaTracker : Color.gray)
+                                    .background(viewmodel.volumes.contains(volumen) ? Color.blueMangaTracker : Color.gray)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                             }
                             /// Muestra una alerta en caso de error al persistir la selección.

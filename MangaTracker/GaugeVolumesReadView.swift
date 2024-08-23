@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// `Gauge2` es una vista que muestra un indicador de progreso relacionado con el número de volúmenes de manga leídos por el usuario
+/// `GaugeVolumesReadView` es una vista que muestra un indicador de progreso relacionado con el número de volúmenes de manga leídos por el usuario
 /// en relación con el total de volúmenes disponibles en su colección.
 ///
 /// La vista incluye un `Stepper` que permite al usuario ajustar manualmente el número de volúmenes leídos. Cada vez que se ajusta el valor,
@@ -10,7 +10,7 @@ import SwiftUI
 /// - Note: La vista permite al usuario seguir y ajustar el progreso de su lectura de manera intuitiva, utilizando controles fáciles de entender
 ///   y una representación visual clara del progreso.
 
-struct Gauge2: View {
+struct GaugeVolumesReadView: View {
     
     @ObservedObject var viewmodel: MyCollectionDetailViewModel
     
@@ -21,14 +21,15 @@ struct Gauge2: View {
                 Text("Volumes read")
                     .bold()
                     .foregroundStyle(Color.orangeMangaTracker)
-                    .font(UIDevice.isIPad ? .title2 : .title3)
+                    .font(UIDevice.isIPad ? .title2 : .callout)
                 
                 /// Stepper para ajustar el número de volúmenes leídos
                 Stepper(value: $viewmodel.reading, in: 0...(viewmodel.manga.volumes ?? 0)) {
                     // Sin etiqueta visible
                 }
-                .background(Color.orangeMangaTracker, in: RoundedRectangle(cornerRadius: 9))
+                .background(Color.blueMangaTracker, in: RoundedRectangle(cornerRadius: 9))
                 .labelsHidden()
+                .tint(Color.softWhiteBackground)
                 .onChange(of: viewmodel.reading) { oldValue, newValue in
                     /// Persistencia del valor actualizado
                     viewmodel.persistReadingVolume()
@@ -51,9 +52,9 @@ struct Gauge2: View {
 
 #Preview {
     ZStack {
-        LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+        Color.softWhiteBackground
             .ignoresSafeArea()
         
-        Gauge2(viewmodel: MyCollectionDetailViewModel(manga: .preview))
+        GaugeVolumesReadView(viewmodel: MyCollectionDetailViewModel(manga: .preview))
     }
 }

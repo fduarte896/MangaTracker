@@ -14,28 +14,35 @@ struct MyCollectionListView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                /// Fondo con gradiente.
-                LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+                Color.softWhiteBackground
                     .ignoresSafeArea()
                 
                 Group {
                     /// Muestra un mensaje si no se encuentran mangas en la búsqueda.
                     if viewmodelCollection.successSearch == false {
                         ContentUnavailableView("No Mangas Found", systemImage: "popcorn", description: Text("We couldn't find any manga called \(viewmodelCollection.searchedText)"))
-                            .foregroundStyle(Color.grayMangaTracker)
+                            .foregroundStyle(Color.darkGrayMangaTracker)
                     } else {
                         /// Muestra un mensaje si la colección está vacía.
                         if viewmodelCollection.loadedMyCollectionMangas.isEmpty {
                             ContentUnavailableView("Your collection is empty", systemImage: "magazine", description: Text("Go to the explore section and add some exciting mangas to your collection!"))
-                                .foregroundStyle(Color.grayMangaTracker)
+                                .foregroundStyle(Color.darkGrayMangaTracker)
                         } else {
                             /// Muestra la lista de mangas en la colección.
                             List {
                                 ForEach(viewmodelCollection.filteredMangas) { manga in
-                                    NavigationLink(value: manga) {
-                                        CellView(manga: manga, showOwnedVolumes: true, isSearchListView: true)
+                                    if UIDevice.isIPhone {
+                                        NavigationLink(value: manga) {
+                                            CellView(manga: manga, showOwnedVolumes: true, isSearchListView: true)
+                                        }
+                                        .listRowBackground(Color.clear)
+                                    } else {
+                                        NavigationLink(value: manga) {
+                                            CellViewiPad(manga: manga, showOwnedVolumes: true, isSearchListView: true)
+                                        }
+                                        .listRowBackground(Color.clear)
                                     }
-                                    .listRowBackground(Color.clear)
+
                                 }
                                 /// Permite eliminar mangas de la colección.
                                 .onDelete(perform: viewmodelCollection.deleteMangas)
@@ -52,15 +59,16 @@ struct MyCollectionListView: View {
                             /// Muestra el número total de mangas en la colección.
                             .safeAreaInset(edge: .bottom) {
                                 Text("Total: \(viewmodelCollection.loadedMyCollectionMangas.count)")
+                                    .font(UIDevice.isIPhone ? .headline : .title2)
                                     .foregroundStyle(Color.white)
                                     .bold()
                                     .padding(.horizontal)
                                     .background(Color.gray.opacity(0.9))
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                     .overlay(content: {
-                                        RoundedRectangle(cornerRadius: 10).stroke(Color.orangeMangaTracker, lineWidth: 2)
+                                        RoundedRectangle(cornerRadius: 10).stroke(Color.blueMangaTracker, lineWidth: 2)
                                     })
-                                    .frame(width: 100)
+                                    .frame(width: UIDevice.isIPhone ? 100 : 300)
                                     .padding(.bottom, 5)
                             }
                         }

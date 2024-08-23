@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// `GaugeView` es una vista que muestra un indicador de progreso que representa el número de volúmenes de manga comprados
+/// `GaugeVolumesOwnedView` es una vista que muestra un indicador de progreso que representa el número de volúmenes de manga comprados
 /// en relación con el total de volúmenes disponibles en la colección del usuario.
 ///
 /// La vista incluye un botón que, al ser presionado, muestra un modal con la lista de volúmenes disponibles, permitiendo
@@ -9,7 +9,7 @@ import SwiftUI
 /// - Note: La vista está diseñada para mostrar el progreso de la colección de volúmenes del usuario, con una representación visual clara
 ///   y una opción para ver y marcar volúmenes específicos.
 
-struct GaugeView: View {
+struct GaugeVolumesOwnedView: View {
     
     @ObservedObject var viewmodel: MyCollectionDetailViewModel
     @State private var showVolumes: Bool = false
@@ -26,13 +26,14 @@ struct GaugeView: View {
                     HStack(spacing: 20) {
                         Text(viewmodel.collectionCompleted ? "Congratulations, collection completed! 🥳" : "Volumes owned")
                             .foregroundStyle(Color.orangeMangaTracker)
-                            .font(UIDevice.isIPad ? .title2 : .title3)
+                            .font(UIDevice.isIPad ? .title2 : .callout)
                         
                         Text("Show")
                             .frame(width: 70, height: 40)
-                            .foregroundStyle(Color.black)
-                            .background(Color.orangeMangaTracker)
+                            .foregroundStyle(Color.softWhiteBackground)
+                            .background(Color.blueMangaTracker)
                             .clipShape(Capsule())
+                            .font(UIDevice.isIPad ? .title2 : .callout)
                     }
                 }
                 .bold()
@@ -60,9 +61,9 @@ struct GaugeView: View {
 
 #Preview {
     ZStack {
-        LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+        Color.softWhiteBackground
             .ignoresSafeArea()
         
-        GaugeView(viewmodel: MyCollectionDetailViewModel(manga: .preview))
+        GaugeVolumesOwnedView(viewmodel: MyCollectionDetailViewModel(manga: .preview))
     }
 }

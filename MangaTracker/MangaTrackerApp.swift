@@ -6,7 +6,9 @@ struct MangaTrackerApp: App {
     @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
     @State private var showSplash = true
     @State private var showOnboarding = false
-
+    let uiColorGrayMangaTracker = UIColor(red: 204/255, green: 210/255, blue: 224/255, alpha: 1.0)
+    let uiColorDarkGrayMangaTracker = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0)
+    
     init() {
         customizeTabBarAppearance()
     }
@@ -44,8 +46,8 @@ struct MangaTrackerApp: App {
     private func customizeTabBarAppearance() {
         let tabBarAppearance = UITabBarAppearance()
         
-        tabBarAppearance.stackedLayoutAppearance.normal.iconColor = UIColor.orange
-        tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.orange]
+        tabBarAppearance.stackedLayoutAppearance.normal.iconColor = uiColorDarkGrayMangaTracker
+        tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: uiColorDarkGrayMangaTracker]
 
         UITabBar.appearance().standardAppearance = tabBarAppearance
         

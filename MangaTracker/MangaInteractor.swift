@@ -2,7 +2,7 @@ import Foundation
 
 protocol MangaProtocol {
 
-    func getAllMangas() async throws -> [MangaModel]
+
     func getAllMangasPaginated(page: Int, mangasPerPage: Int) async throws -> [MangaModel]
     func getBestMangas(page: Int, mangasPerPage: Int) async throws -> [MangaModel]
     

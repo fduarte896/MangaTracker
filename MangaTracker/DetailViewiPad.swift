@@ -21,7 +21,7 @@ struct DetailViewiPad: View {
         Text(viewmodel.manga.title)
             .font(.largeTitle)
             .bold()
-            .foregroundStyle(Color.orangeMangaTracker)
+            .foregroundStyle(Color.darkGrayMangaTracker)
             .multilineTextAlignment(.center)
             .padding(.horizontal)
 
@@ -31,14 +31,14 @@ struct DetailViewiPad: View {
 
         /// Muestra los detalles formateados del manga.
         Text(viewmodel.formatMangaDetails())
-            .font(.footnote)
-            .foregroundStyle(Color.grayMangaTracker)
+            .font(.headline)
+            .foregroundStyle(Color.darkGrayMangaTracker)
 
         /// Muestra los autores del manga.
         Text("by")
             .font(.caption)
             .padding(.vertical, 1)
-            .foregroundStyle(Color.grayMangaTracker)
+            .foregroundStyle(Color.darkGrayMangaTracker)
         
         ScrollView(.horizontal) {
             HStack(alignment: .center) {
@@ -47,24 +47,29 @@ struct DetailViewiPad: View {
                         if viewmodel.manga.authors.count > 2 {
                             Text(author.authorCompleteName)
                                 .padding(.leading)
-                                .foregroundStyle(Color.orangeMangaTracker)
+                                .foregroundStyle(Color.blueMangaTracker)
+                                .frame(width: UIScreen.main.bounds.width / CGFloat(viewmodel.manga.authors.count) - 20)
+                        }  else if viewmodel.manga.authors.count == 0 {
+                            Text("No authors reported")
+                                .frame(width: UIScreen.main.bounds.width / CGFloat(viewmodel.manga.authors.count) - 20)
+                                .foregroundStyle(Color.blueMangaTracker)
                         } else {
                             Text(author.authorCompleteName)
                                 .frame(width: UIScreen.main.bounds.width / CGFloat(viewmodel.manga.authors.count) - 20)
-                                .foregroundStyle(Color.orangeMangaTracker)
-                                .multilineTextAlignment(.center)
+                                .foregroundStyle(Color.blueMangaTracker)
                         }
                     }
                 }
             }
             .padding(.horizontal, 10)
             .padding(.bottom)
+            
         }
         .scrollIndicators(.hidden)
         
         /// Muestra los botones de agregar a la colección o a la Bucket List con tamaños adecuados para iPad.
         HStack(alignment: .center, spacing: 20) {
-            CircularGaugeView(manga: viewmodel.manga)
+            GaugeScoreView(manga: viewmodel.manga)
             
             Button {
                 withAnimation {
@@ -75,10 +80,11 @@ struct DetailViewiPad: View {
             } label: {
                 VStack {
                     Image(systemName: viewmodel.isMyCollectionButtonDisable ? "checkmark" : "plus")
-                        .foregroundStyle(Color.orangeMangaTracker)
+                        .foregroundStyle(Color.blueMangaTracker)
                         .font(.title3)
                     Text(viewmodel.isMyCollectionButtonDisable ? "Added to My collection" : "My Collection")
                         .font(.title3)
+                        .foregroundStyle(Color.darkGrayMangaTracker)
                 }
             }
             .disabled(viewmodel.isMyCollectionButtonDisable)
@@ -93,10 +99,11 @@ struct DetailViewiPad: View {
                 } label: {
                     VStack {
                         Image(systemName: viewmodel.isMyBucketButtonDisable ? "checkmark" : "plus")
-                            .foregroundStyle(Color.orangeMangaTracker)
+                            .foregroundStyle(Color.blueMangaTracker)
                             .font(.title3)
                         Text(viewmodel.isMyBucketButtonDisable ? "Added to My Bucket List" : "My Bucket")
                             .font(.title3)
+                            .foregroundStyle(Color.darkGrayMangaTracker)
                     }
                 }
                 .disabled(viewmodel.isMyBucketButtonDisable)
@@ -107,7 +114,7 @@ struct DetailViewiPad: View {
         .padding(.bottom)
         
         /// Muestra la sinopsis del manga, con opción de expandir o colapsar.
-        Text(viewmodel.manga.sypnosis ?? "")
+        Text(viewmodel.manga.background ?? viewmodel.manga.sypnosis ?? "No information provided")
             .multilineTextAlignment(.leading)
             .padding()
             .frame(maxWidth: .infinity)
@@ -130,7 +137,7 @@ struct DetailViewiPad: View {
         ExtraDetailsView(viewmodel: viewmodel)
             .padding()
             .frame(maxWidth: .infinity)
-            .foregroundStyle(Color.grayMangaTracker)
+            .foregroundStyle(Color.darkGrayMangaTracker)
             .background(RoundedRectangle(cornerRadius: 20)
                 .fill(Color.grayMangaTracker)
                 .opacity(0.3))

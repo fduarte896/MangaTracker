@@ -6,8 +6,7 @@ import SwiftUI
 /// La vista adapta automáticamente el tamaño del póster en función del dispositivo y el estado de `isCarrousel`
 /// y `isiPadAndSmall`, asegurando que se vea bien en todas las vistas donde se utiliza.
 ///
-/// - Note: La vista utiliza `AsyncImage` para cargar la imagen del póster de manera asíncrona, y muestra un `ProgressView`
-///   mientras la imagen se carga.
+/// - Note: La vista utiliza `AsyncImage` para cargar la imagen del póster de manera asíncrona, y muestra un `ProgressView` mientras la imagen se carga.
 ///
 /// - Important: La vista ajusta el tamaño del póster dependiendo de la clase de tamaño horizontal (`horizontalSizeClass`)
 ///   y de los parámetros `isCarrousel` y `isiPadAndSmall`.

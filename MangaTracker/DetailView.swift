@@ -38,13 +38,13 @@ struct DetailView: View {
                 /// Muestra los detalles formateados del manga.
                 Text(viewmodel.formatMangaDetails())
                     .font(.footnote)
-                    .foregroundStyle(Color.grayMangaTracker)
+                    .foregroundStyle(Color.darkGrayMangaTracker)
 
                 /// Muestra los autores del manga.
                 Text("by")
                     .font(.caption)
                     .padding(.vertical, 1)
-                    .foregroundStyle(Color.grayMangaTracker)
+                    .foregroundStyle(Color.darkGrayMangaTracker)
                 
                 ScrollView(.horizontal) {
                     HStack(alignment: .center) {
@@ -53,24 +53,27 @@ struct DetailView: View {
                                 if viewmodel.manga.authors.count > 2 {
                                     Text(author.authorCompleteName)
                                         .padding(.leading)
-                                        .foregroundStyle(Color.orangeMangaTracker)
+                                        .foregroundStyle(Color.blueMangaTracker)
+                                        .frame(width: UIScreen.main.bounds.width / CGFloat(viewmodel.manga.authors.count) - 20)
+                                } else if viewmodel.manga.authors.count == 0 {
+                                    Text("No authors reported")
+                                        .frame(width: UIScreen.main.bounds.width / CGFloat(viewmodel.manga.authors.count) - 20)
+                                        .foregroundStyle(Color.blueMangaTracker)
                                 } else {
                                     Text(author.authorCompleteName)
                                         .frame(width: UIScreen.main.bounds.width / CGFloat(viewmodel.manga.authors.count) - 20)
-                                        .foregroundStyle(Color.orangeMangaTracker)
-                                        .multilineTextAlignment(.center)
-                                }
-                            }
+                                        .foregroundStyle(Color.blueMangaTracker)
+                                }                            }
                         }
                     }
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 30)
                     .padding(.bottom)
                 }
                 .scrollIndicators(.hidden)
 
                 /// Muestra los botones de agregar a la colección o a la Bucket List los cuales son dinámicos y cambian al ser presionados.
                 HStack(alignment: .center, spacing: 20){
-                    CircularGaugeView(manga: viewmodel.manga)
+                    GaugeScoreView(manga: viewmodel.manga)
                     
                     Button {
                         withAnimation {
@@ -81,9 +84,10 @@ struct DetailView: View {
                     } label: {
                         VStack {
                             Image(systemName: viewmodel.isMyCollectionButtonDisable ? "checkmark" : "plus")
-                                .foregroundStyle(Color.orangeMangaTracker)
+                                .foregroundStyle(Color.blueMangaTracker)
                             Text(viewmodel.isMyCollectionButtonDisable ? "Added to My collection" : "My Collection")
                                 .font(.footnote)
+                                .foregroundStyle(Color.darkGrayMangaTracker)
                         }
                     }
                     .disabled(viewmodel.isMyCollectionButtonDisable)
@@ -98,9 +102,10 @@ struct DetailView: View {
                         } label: {
                             VStack {
                                 Image(systemName: viewmodel.isMyBucketButtonDisable ? "checkmark" : "plus")
-                                    .foregroundStyle(Color.orangeMangaTracker)
+                                    .foregroundStyle(Color.blueMangaTracker)
                                 Text(viewmodel.isMyBucketButtonDisable ? "Added to My Bucket List" : "My Bucket")
                                     .font(.footnote)
+                                    .foregroundStyle(Color.darkGrayMangaTracker)
                             }
                         }
                         .disabled(viewmodel.isMyBucketButtonDisable)
@@ -111,15 +116,15 @@ struct DetailView: View {
                 .padding(.bottom)
                 
                 /// Muestra la sinopsis del manga, con opción de expandir o colapsar.
-                Text(viewmodel.manga.sypnosis ?? "")
+                Text(viewmodel.manga.background ?? viewmodel.manga.sypnosis ?? "No information provided")
                     .multilineTextAlignment(.leading)
                     .padding()
-                    .frame(width: 400)
-                    .background(Color.grayMangaTracker)
+                    .background(Color.grayMangaTracker.opacity(0.3))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .lineLimit(isExpanded ? nil : 7)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
                     .multilineTextAlignment(.trailing)
+                    .foregroundStyle(Color.darkGrayMangaTracker)
                 
                 Button {
                     withAnimation {
@@ -132,8 +137,7 @@ struct DetailView: View {
                 /// Muestra los detalles adicionales del manga.
                 ExtraDetailsView(viewmodel: viewmodel)
                     .padding()
-                    .frame(width: 400)
-                    .foregroundStyle(Color.grayMangaTracker)
+                    .foregroundStyle(Color.darkGrayMangaTracker)
                     .background(RoundedRectangle(cornerRadius: 20)
                         .fill(Color.grayMangaTracker)
                         .opacity(0.3))
@@ -145,7 +149,7 @@ struct DetailView: View {
             }
         }
         .background(
-            LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+            Color.softWhiteBackground
         )
         .onAppear {
             /// Comprueba si el manga está en la colección o en la lista de deseos al aparecer la vista.

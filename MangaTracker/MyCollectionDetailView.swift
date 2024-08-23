@@ -30,11 +30,11 @@ struct MyCollectionDetailView: View {
                     if viewmodel.manga.authors.count > 2 {
                         Text(author.authorCompleteName)
                             .padding(.leading)
-                            .foregroundStyle(Color.grayMangaTracker)
+                            .foregroundStyle(Color.darkGrayMangaTracker)
                     } else {
                         Text(author.authorCompleteName)
                             .frame(width: UIScreen.main.bounds.width / CGFloat(viewmodel.manga.authors.count) - 20)
-                            .foregroundStyle(Color.grayMangaTracker)
+                            .foregroundStyle(Color.darkGrayMangaTracker)
                             .multilineTextAlignment(.center)
                     }
                 }
@@ -48,29 +48,29 @@ struct MyCollectionDetailView: View {
             
             /// Muestra detalles formateados del manga.
             Text(viewmodel.formatMangaDetails())
-                .font(.footnote)
-                .foregroundStyle(Color.grayMangaTracker)
+                .font(UIDevice.isIPhone ? .footnote : .headline)
+                .foregroundStyle(Color.darkGrayMangaTracker)
             
             if viewmodel.manga.volumes != nil {
-                /// Muestra un `GaugeView` si el manga tiene volúmenes.
+                /// Muestra un `GaugeVolumesOwnedView` si el manga tiene volúmenes.
                 /// Este `GaugeView` permite al usuario marcar los volúmenes que tiene en su colección y refleja el progreso en la vista.
-                GaugeView(viewmodel: viewmodel)
+                GaugeVolumesOwnedView(viewmodel: viewmodel)
                     .padding(.horizontal)
                 
                 Divider()
                     .background(Color.grayMangaTracker)
                 
-                /// Muestra un segundo `GaugeView` para que el usuario lleve la cuenta de la lectura del manga.
-                Gauge2(viewmodel: viewmodel)
+                /// Muestra un segundo `GaugeVolumesReadView` para que el usuario lleve la cuenta de la lectura del manga.
+                GaugeVolumesReadView(viewmodel: viewmodel)
                     .padding(.horizontal)
             } else {
                 /// Muestra un mensaje si no hay volúmenes disponibles para el manga.
                 VStack {
                     Image(systemName: "x.circle")
-                        .foregroundStyle(Color.orangeMangaTracker)
+                        .foregroundStyle(Color.red)
                         .font(.title)
                     Text("No volume tracking available for this manga")
-                        .foregroundStyle(Color.grayMangaTracker)
+                        .foregroundStyle(Color.darkGrayMangaTracker)
                 }
                 .frame(width: 300, height: 100)
                 .background(RoundedRectangle(cornerRadius: 9.0)
@@ -82,14 +82,14 @@ struct MyCollectionDetailView: View {
             ExtraDetailsMyCollectionView(viewmodel: viewmodel)
                 .padding()
                 .frame(maxWidth: .infinity)
-                .foregroundStyle(Color.grayMangaTracker)
+                .foregroundStyle(Color.darkGrayMangaTracker)
                 .background(RoundedRectangle(cornerRadius: 20)
                     .fill(Color.grayMangaTracker)
                     .opacity(0.3))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
         }
         .background(
-            LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+            Color.softWhiteBackground
                 .ignoresSafeArea()
         )
         /// Configura una barra de herramientas con opciones para compartir y navegar al sitio web del manga.

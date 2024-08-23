@@ -9,20 +9,20 @@ struct BucketListView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Fondo degradado para la vista.
-                LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+                
+                Color.softWhiteBackground
                     .ignoresSafeArea()
                 
                 Group {
                     // Condicional para mostrar "No Mangas Found" cuando no hay resultados de búsqueda.
                     if viewmodelBucket.successSearch == false {
                         ContentUnavailableView("No Mangas Found", systemImage: "popcorn", description: Text("We couldn't find any manga called \(viewmodelBucket.searchedText)"))
-                            .foregroundStyle(Color.grayMangaTracker)
+                            .foregroundStyle(Color.darkGrayMangaTracker)
                     } else {
                         // Condicional para mostrar "Your Bucket List is empty" cuando la lista de deseos está vacía.
                         if viewmodelBucket.loadedBucketMangas.isEmpty {
                             ContentUnavailableView("Your Bucket List is empty", systemImage: "bookmark.slash", description: Text("Go to the explore section and add some exciting mangas to your bucket list"))
-                                .foregroundStyle(Color.grayMangaTracker)
+                                .foregroundStyle(Color.darkGrayMangaTracker)
                         } else {
                             // Lista que muestra los mangas en la lista de deseos.
                             List {
@@ -46,14 +46,15 @@ struct BucketListView: View {
                                 // Muestra el total de mangas en la lista.
                                 Text("Total: \(viewmodelBucket.loadedBucketMangas.count)")
                                     .foregroundStyle(Color.white)
+                                    .font(UIDevice.isIPhone ? .headline : .title2)
                                     .bold()
                                     .padding(.horizontal)
                                     .background(Color.gray.opacity(0.9))
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                     .overlay {
-                                        RoundedRectangle(cornerRadius: 10).stroke(Color.orangeMangaTracker, lineWidth: 2)
+                                        RoundedRectangle(cornerRadius: 10).stroke(Color.blueMangaTracker, lineWidth: 2)
                                     }
-                                    .frame(width: 100)
+                                    .frame(width: UIDevice.isIPhone ? 100 : 300)
                                     .padding(.bottom, 5)
                             }
                         }

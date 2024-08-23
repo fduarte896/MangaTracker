@@ -11,6 +11,8 @@ import SwiftUI
 ///
 /// - Note: La vista está diseñada para ser utilizada en carruseles y secciones donde se destacan los mejores mangas, mostrando la portada junto con su posición en la lista.
 
+import SwiftUI
+
 struct TopMangaPosterView: View {
     var manga: MangaModel
     var topIndex: Int? = nil
@@ -21,11 +23,32 @@ struct TopMangaPosterView: View {
             PosterView(manga: manga, isCarousel: false, isiPadAndSmall: true)
                 .overlay {
                     if let index = topIndex {
-                        Text(String(index + 1))
-                            .font(.system(size: 100, weight: .medium))
-                            .foregroundStyle(Color.orangeMangaTracker)
-                            .padding([.top, .leading], 10)
-                            .offset(x: -70, y: 50)
+                        ZStack {
+                            // Contorno simulando con varias capas de texto desplazadas
+                            Text(String(index + 1))
+                                .font(.system(size: 100, weight: .medium))
+                                .foregroundColor(.softWhiteBackground)
+                                .offset(x: 2, y: 2)
+                            Text(String(index + 1))
+                                .font(.system(size: 100, weight: .medium))
+                                .foregroundColor(.softWhiteBackground)
+                                .offset(x: -2, y: -2)
+                            Text(String(index + 1))
+                                .font(.system(size: 100, weight: .medium))
+                                .foregroundColor(.softWhiteBackground)
+                                .offset(x: -2, y: 2)
+                            Text(String(index + 1))
+                                .font(.system(size: 100, weight: .medium))
+                                .foregroundColor(.softWhiteBackground)
+                                .offset(x: 2, y: -2)
+
+                            // Texto principal
+                            Text(String(index + 1))
+                                .font(.system(size: 100, weight: .medium))
+                                .foregroundStyle(Color.blueMangaTracker)
+                        }
+                        .padding([.top, .leading], 10)
+                        .offset(x: -70, y: 50)
                     }
                 }
         }

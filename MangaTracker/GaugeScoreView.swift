@@ -1,14 +1,14 @@
 import SwiftUI
 
-/// `CircularGaugeView` es una vista que muestra un indicador circular que representa la puntuación de un manga,
-/// normalizando el valor de la puntuación dentro del rango de 0 a 1, adecuado para su uso en un `Gauge`.
+/// `GaugeScoreView` es una vista que muestra un indicador circular que representa la puntuación de un manga,
+/// normalizando el valor de la puntuación dentro del rango de 0 a 1, adecuado para su uso del `Gauge`.
 ///
 /// La vista utiliza un degradado de colores para indicar visualmente el rango de la puntuación, y puede ser escalada
 /// para ajustarse a diferentes tamaños de presentación. La puntuación se muestra en el centro del indicador, junto con
 /// un texto adicional que dice "Score".
 ///
 /// - Parameters:
-///   - isSmall: Un booleano que determina si la vista se muestra en tamaño pequeño o grande.
+///   - isSmall: Un booleano que determina si el Gauge se muestra en tamaño pequeño o grande.
 ///   - manga: Una instancia de `MangaModel` que contiene la información del manga, incluyendo su puntuación.
 ///   - gradient: Un `Gradient` que define los colores utilizados para el indicador circular. El valor predeterminado incluye
 ///     colores de rojo a verde, pasando por amarillo.
@@ -16,7 +16,7 @@ import SwiftUI
 /// - Note: La vista está diseñada para ser reutilizable en diferentes contextos donde se necesite mostrar la puntuación
 ///   de un manga de manera visual y atractiva.
 
-struct CircularGaugeView: View {
+struct GaugeScoreView: View {
     
     var isSmall = true
     var manga: MangaModel
@@ -28,22 +28,39 @@ struct CircularGaugeView: View {
     }
     
     var body: some View {
-        Gauge(value: normalizedScore) {
-            Text("\(manga.score.formatted())")
-                .foregroundStyle(Color.grayMangaTracker)
+        if manga.score != 0 {
+            Gauge(value: normalizedScore) {
+                Text("\(manga.score.formatted())")
+                    .foregroundStyle(Color.darkGrayMangaTracker)
+            }
+            .gaugeStyle(.accessoryCircular)
+            .scaleEffect(isSmall ? 1 : 4)
+            .tint(gradient)
+            .overlay(alignment: .center) {
+                Text("Score")
+                    .font(.footnote)
+                    .bold()
+                    .foregroundStyle(Color.darkGrayMangaTracker)
+            }
+        } else {
+            Gauge(value: normalizedScore) {
+                Text("\(manga.score.formatted())")
+                    .foregroundStyle(Color.darkGrayMangaTracker)
+            }
+            .gaugeStyle(.accessoryCircular)
+            .scaleEffect(isSmall ? 1 : 4)
+            .tint(gradient)
+            .overlay(alignment: .center) {
+                Text("NA")
+                    .font(.footnote)
+                    .bold()
+                    .foregroundStyle(Color.darkGrayMangaTracker)
+            }
         }
-        .gaugeStyle(.accessoryCircular)
-        .scaleEffect(isSmall ? 1 : 4)
-        .tint(gradient)
-        .overlay(alignment: .center) {
-            Text("Score")
-                .font(.footnote)
-                .bold()
-                .foregroundStyle(Color.grayMangaTracker)
-        }
+
     }
 }
 
 #Preview {
-    CircularGaugeView(manga: .preview)
+    GaugeScoreView(manga: .preview)
 }

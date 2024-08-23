@@ -8,25 +8,25 @@ import Foundation
 /// en la vista principal, por lo que no se consideró necesario crear un viewmodel separado para esa funcionalidad.
 final class ExploreViewModel: ObservableObject {
     
-    /// Lista de mangas obtenidos para mostrar en la vista de exploración.
+    
     @Published var mangas: [MangaModel] = []
 
-    /// Mensaje de error que se muestra en caso de fallo en la carga de datos.
+    
     @Published var errorMessage: String = ""
     
-    /// Indica si se debe mostrar una alerta en la vista.
+    
     @Published var showAlert: Bool = false
     
     /// Último manga visualizado en la lista.
     @Published var theLastManga: MangaModel?
     
-    /// Lista de mangas filtrados por autor.
+    
     @Published var mangasByAuthor: [MangaModel] = []
     
-    /// Lista de los mejores mangas, utilizados en la sección de Top 10.
+    
     @Published var bestMangasArray: [MangaModel] = []
     
-    /// Variable que almacena el tipo de error ocurrido en la vista de exploración.
+    
     @Published var myError: ExploreViewErrors?
     
     private let interactor: MangaProtocol
@@ -42,7 +42,7 @@ final class ExploreViewModel: ObservableObject {
     @Published var successSearch = true
     @Published var searchedText = ""
     @Published var isSearched = false
-    @Published var isList = false
+    @Published var listNeeded = false
     
     /// Inicializa el `ExploreViewModel` con un interactor para manejar la obtención de datos.
     /// - Parameter interactor: Protocolo que define las funciones para interactuar con la API o base de datos de mangas. Se asigna un valor por defecto.
@@ -143,7 +143,7 @@ final class ExploreViewModel: ObservableObject {
         
         searchTask = Task {
             do {
-                try await Task.sleep(for: .milliseconds(400))
+                try await Task.sleep(for: .milliseconds(800))
 
                 do {
                     let searchedMangas = try await interactor.searchMangaContains(text: text, page: page)
@@ -159,6 +159,7 @@ final class ExploreViewModel: ObservableObject {
                         myError = .searchError
                         errorMessage = "Error loading your search"
                         showAlert = true
+                        successSearch = false
                     }
                 }
 
@@ -171,14 +172,14 @@ final class ExploreViewModel: ObservableObject {
     /// Maneja el cambio de texto en la búsqueda, "reseteando" estados y realizando la búsqueda si aplica.
     func onChangeText() {
         successSearch = true
-        isList = true
+        listNeeded = true
         if searchedText.isEmpty {
             searchTask?.cancel()
             mangas.removeAll()
             isSearched = false
             page = 1
             fetchAllMangas()
-            isList = false
+            listNeeded = false
         } else {
             mangas.removeAll()
             isSearched = true
@@ -206,8 +207,6 @@ final class ExploreViewModel: ObservableObject {
     }
 }
 
-/// Enum que representa los errores posibles en la vista de exploración.
-/// Proporciona descripciones localizadas para cada error.
 enum ExploreViewErrors: LocalizedError {
     case carrouselMangasError
     case bestMangasError

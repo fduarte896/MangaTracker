@@ -16,7 +16,7 @@ struct NewCategoriesView: View {
     var body: some View {
         ZStack {
             /// Fondo con gradiente.
-            LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+            Color.softWhiteBackground
                 .ignoresSafeArea()
             
             ScrollView {
@@ -24,7 +24,8 @@ struct NewCategoriesView: View {
                 Text(category)
                     .font(.title)
                     .padding(.bottom, -10)
-                    .foregroundStyle(Color.orangeMangaTracker)
+                    .foregroundStyle(Color.blueMangaTracker)
+                    .bold()
                     .onAppear {
                         /// Carga los datos correspondientes a la categoría seleccionada.
                         switch category {
@@ -43,7 +44,8 @@ struct NewCategoriesView: View {
                 /// Se presenta en un formato horizontal con desplazamiento para cada subcategoría. La paginación también está activada.
                 ForEach(viewmodel.subCategories, id: \.self) { subCategory in
                     LazyVStack(alignment: .leading) {
-                        Section(header: Text(subCategory).font(.title).foregroundStyle(Color.orangeMangaTracker)) {
+                        Section(header: Text(subCategory).font(.title).foregroundStyle(Color.blueMangaTracker).bold()) {
+                            
                             ScrollView(.horizontal) {
                                 LazyHStack {
                                     if let mangas = viewmodel.mangasByCategory2[subCategory] {
@@ -55,7 +57,7 @@ struct NewCategoriesView: View {
                                                     Text(manga.title)
                                                         .font(.headline)
                                                         .frame(maxWidth: 200, maxHeight: 100)
-                                                        .foregroundStyle(Color.orangeMangaTracker)
+                                                        .foregroundStyle(Color.blueMangaTracker)
                                                         .lineLimit(2)
                                                 }
                                                 .onAppear {
@@ -70,7 +72,13 @@ struct NewCategoriesView: View {
                                     }
                                 }
                             }
+                            Divider()
+                                .background(Color.orangeMangaTracker)
+                                
                         }
+                    }
+                    .onAppear {
+                        print(subCategory)
                     }
                     .font(.title2)
                 }
@@ -161,16 +169,16 @@ struct NewCategoriesView: View {
             
             /// Muestra un indicador de carga mientras se obtienen los datos.
             if viewmodel.isLoading {
-                LinearGradient(colors: [Color.gradientTopColor, Color.gradientBottomColor], startPoint: .top, endPoint: .bottom)
+                Color.softWhiteBackground                    
                     .ignoresSafeArea()
                     .overlay(
                         VStack {
                             Text("Loading " + category)
                                 .font(.title)
-                                .foregroundStyle(Color.grayMangaTracker)
+                                .foregroundStyle(Color.darkGrayMangaTracker)
                             ProgressView()
                                 .controlSize(.extraLarge)
-                                .tint(Color.orangeMangaTracker)
+                                .tint(Color.darkGrayMangaTracker)
                         }
                             .padding()
                     )
